@@ -1,6 +1,7 @@
+import Character from "@components/Game/Characters";
 import Rules from "./Rules";
 import Game from "./Game";
-import Counter from "../components/Counter";
+import Cheers from "./Cheers";
 import logo from "../assets/logo.svg";
 
 export default function Home() {
@@ -8,10 +9,10 @@ export default function Home() {
     <header className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
       <p>Hello Vite + React !</p>
-
-      <Counter />
+      <Cheers />
       <Rules />
       <Game />
+      <Character />
 
       <p>
         Edit <code>App.jsx</code> and save to test HMR updates.

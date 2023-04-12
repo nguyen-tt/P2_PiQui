@@ -1,3 +1,5 @@
+import Rules from "./Rules";
+import Game from "./Game";
 import Counter from "../components/Counter";
 import logo from "../assets/logo.svg";
 
@@ -8,6 +10,8 @@ export default function Home() {
       <p>Hello Vite + React !</p>
 
       <Counter />
+      <Rules />
+      <Game />
 
       <p>
         Edit <code>App.jsx</code> and save to test HMR updates.

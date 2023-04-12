@@ -1,3 +1,4 @@
+import Character from "@components/Game/Character";
 import Rules from "./Rules";
 import Game from "./Game";
 import Counter from "../components/Counter";
@@ -12,6 +13,7 @@ export default function Home() {
       <Counter />
       <Rules />
       <Game />
+      <Character />
 
       <p>
         Edit <code>App.jsx</code> and save to test HMR updates.

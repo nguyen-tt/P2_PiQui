@@ -1,25 +1,33 @@
+* {
+  margin: 0;
+}
+
 body {
   text-align: center;
 }
 
-img {
-  width: 10rem;
+.thank-img {
+  text-align: center;
+}
+.thank-img img {
+  width: 20rem;
 }
 
 .charac-img {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+.charac-img img {
+  width: 6rem;
 }
 
-.alaric,
-.amani,
-.charlotte,
-.rudy,
-.trung {
-  width: 5rem;
+.cheerUs {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
 }
 
-figcaption {
-  font-size: 3rem;
+.ratingStars {
+  width: 20rem;
 } /*# sourceMappingURL=aboutUs.css.map */

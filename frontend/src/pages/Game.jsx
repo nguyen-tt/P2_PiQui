@@ -1,5 +1,5 @@
 function Game() {
-  return <p>Page Game</p>;
+  return <p>coucouGame</p>;
 }
 
 export default Game;

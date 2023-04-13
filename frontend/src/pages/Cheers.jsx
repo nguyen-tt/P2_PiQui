@@ -1,5 +1,5 @@
 function Cheers() {
-  return <div />;
+  return <div>test</div>;
 }
 
 export default Cheers;

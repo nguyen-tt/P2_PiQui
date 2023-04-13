@@ -1,3 +1,5 @@
+import Footer from "@components/Footer/Footer";
+import NavBar from "@components/NavBar/NavBar";
 import Home from "./pages/Home";
 
 import "./App.css";
@@ -5,8 +7,9 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
+      <NavBar />
       <Home />
-      <p>coucou</p>
+      <Footer />
     </div>
   );
 }

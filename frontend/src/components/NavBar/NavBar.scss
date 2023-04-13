@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.NavbarItems {
+  display: flex;
+  flex-wrap: wrap; /*Mettre le menu burger en mobile first au lieu du flex wrap */
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ba9ae1;
+  color: white;
+}
+h1 {
+  display: flex;
+  color: white;
+  justify-content: left;
+  margin-left: 0px;
+}
+#navbarlist {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#navbarlist li {
+  list-style: none;
+  padding: 0 20px;
+}
+#navbarlist li a {
+  text-decoration: none;
+  font-size: 0, 5rem;
+  font-weight: 600;
+  color: white;
+}
+@media screen and (max-width: 780px) {
+  #navbarlist {
+    display: none;
+  }
+}

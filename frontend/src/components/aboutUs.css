@@ -23,11 +23,41 @@ body {
   width: 6rem;
 }
 
+hr {
+  display: none;
+}
+
 .cheerUs {
   margin-top: 4rem;
-  margin-bottom: 2rem;
+}
+.cheerUs p {
+  font-size: 1.5rem;
 }
 
 .ratingStars {
   width: 20rem;
-} /*# sourceMappingURL=aboutUs.css.map */
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    display: flex;
+  }
+  .about-us {
+    margin: 5rem;
+  }
+  .cheerUs {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+  .charac-img {
+    flex-wrap: nowrap;
+  }
+  .thank-img img {
+    width: 30rem;
+  }
+  hr {
+    display: block;
+    margin-top: 5rem;
+    height: 80vh;
+  }
+}/*# sourceMappingURL=aboutUs.css.map */

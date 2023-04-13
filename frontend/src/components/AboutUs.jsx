@@ -2,6 +2,8 @@ import thankyou from "../assets/thankyou.png";
 import charlotte from "../assets/charlotte.png";
 import alaric from "../assets/alaric.png";
 import trung from "../assets/trung.png";
+import amani from "../assets/amani.png";
+import avatartest from "../assets/avatartest.png";
 import stars from "../assets/stars.jpg";
 import "./aboutUs.css";
 
@@ -13,22 +15,33 @@ function AboutUs() {
           <img src={thankyou} alt="Thank you !" />
         </figure>
         <figure className="charac-img">
-          <img className="alaric" src={alaric} alt="Alaric character" />
-          {/* <figcaption>Alaric</figcaption> */}
-          <img className="amani" src={trung} alt="Amani character" />
-          {/* <figcaption>Amani</figcaption> */}
-          <img
-            className="charlotte"
-            src={charlotte}
-            alt="Charlotte character"
-          />
-          {/* <figcaption>Charlotte</figcaption> */}
-          <img className="rudy" src={trung} alt="Rudy character" />
-          {/* <figcaption>Rudy</figcaption> */}
-          <img className="trung" src={trung} alt="Trung character" />
-          {/* <figcaption>Trung</figcaption> */}
+          <div className="alaric-container">
+            <img className="alaric" src={alaric} alt="Alaric character" />
+            <figcaption>Alaric</figcaption>
+          </div>
+          <div className="amani-container">
+            <img className="amani" src={amani} alt="Amani character" />
+            <figcaption>Amani</figcaption>
+          </div>
+          <div className="charlotte-container">
+            <img
+              className="charlotte"
+              src={charlotte}
+              alt="Charlotte character"
+            />
+            <figcaption>Charlotte</figcaption>
+          </div>
+          <div className="rudy-container">
+            <img className="rudy" src={avatartest} alt="Rudy character" />
+            <figcaption>Rudy</figcaption>
+          </div>
+          <div className="trung-container">
+            <img className="trung" src={trung} alt="Trung character" />
+            <figcaption>Trung</figcaption>
+          </div>
         </figure>
       </div>
+      <hr />
       <div className="cheerUs">
         <h1>Soutenez-nous!</h1>
         <br />
@@ -53,8 +66,8 @@ function AboutUs() {
           qualité pour vous aider à profiter pleinement de l'univers de jeu que
           nous avons créé.
         </p>
+        <img className="ratingStars" src={stars} alt="rating stars" />
       </div>
-      <img className="ratingStars" src={stars} alt="rating stars" />
     </body>
   );
 }

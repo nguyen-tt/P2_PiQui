@@ -6,6 +6,8 @@ import Rules from "@pages/Rules";
 function App() {
   return (
     <div className="App">
+      <Home />
+
       <Rules />
 
       <AboutUs />

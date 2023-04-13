@@ -8,8 +8,10 @@ export default function Home() {
         Vous pouvez consulter les <a href=" ">regles du jeu</a> avant de lancer
         une partie!
       </p>
-      <p>Sinon vous pouvez directement jouer</p>
-      <button type="button">PLAY</button>
+      <p>Sinon vous pouvez directement jouer!</p>
+      <button type="button">
+        <a href=" ">PLAY</a>
+      </button>
     </div>
   );
 }

@@ -1,0 +1,25 @@
+body {
+  text-align: center;
+}
+
+img {
+  width: 10rem;
+}
+
+.charac-img {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.alaric,
+.amani,
+.charlotte,
+.rudy,
+.trung {
+  width: 5rem;
+}
+
+figcaption {
+  font-size: 3rem;
+} /*# sourceMappingURL=aboutUs.css.map */

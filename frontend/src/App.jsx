@@ -1,12 +1,9 @@
-import Home from "./pages/Home";
-
-import "./App.css";
+import AboutUs from "@components/AboutUs";
 
 function App() {
   return (
     <div className="App">
-      <Home />
-      <p>coucou</p>
+      <AboutUs />
     </div>
   );
 }

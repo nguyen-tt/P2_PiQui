@@ -1,0 +1,17 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.homePage {
+  text-align: center;
+
+  button {
+    width: 12rem;
+    height: 3rem;
+    border-radius: 20px;
+    border-style: inherit;
+    background-color: #ba9ae1;
+  }
+}

@@ -7,26 +7,26 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-}
 
-h1 {
-  display: flex;
-  color: white;
-  justify-content: left;
-}
+  h1 {
+    display: flex;
+    color: white;
+    justify-content: left;
+  }
 
-#footerlist {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#footerlist li {
-  list-style: none;
-  padding: 0 20px;
-}
-#footerlist li a {
-  text-decoration: none;
-  font-size: 0, 5rem;
-  font-weight: 600;
-  color: white;
+  #footerlist {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #footerlist li {
+    list-style: none;
+    padding: 0 20px;
+  }
+  #footerlist li a {
+    text-decoration: none;
+    font-size: 0, 5rem;
+    font-weight: 600;
+    color: white;
+  }
 }

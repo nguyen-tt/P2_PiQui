@@ -1,6 +1,7 @@
-body {
+.centering {
   display: flex;
-  height: 100vh;
+  min-width: 100vw;
+  min-height: 80vh;
   align-items: center;
 }
 .rules {

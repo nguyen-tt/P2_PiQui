@@ -5,38 +5,40 @@
   align-items: center;
   background-color: #ba9ae1;
   color: white;
-}
-h1 {
-  display: flex;
-  color: white;
-  justify-content: left;
-  margin-left: 0px;
-}
-.navbarlist {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.navbarlist li {
-  list-style: none;
-  padding: 0 20px;
-  text-decoration: none;
-  font-size: 0, 5rem;
-  font-weight: 600;
-  color: white;
-}
-a.navbarLink {
-  list-style: none;
-  text-decoration: none;
-  color: white;
-}
-.navbarBurger {
-  width: 40px;
-  height: 40px;
-  background: transparent;
-  border: none;
-  color: inherit;
-  display: none;
+  min-width: 100vw;
+
+  h1 {
+    display: flex;
+    color: white;
+    justify-content: left;
+    margin-left: 0px;
+  }
+  .navbarlist {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbarlist li {
+    list-style: none;
+    padding: 0 20px;
+    text-decoration: none;
+    font-size: 0, 5rem;
+    font-weight: 600;
+    color: white;
+  }
+  a.navbarLink {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+  }
+  .navbarBurger {
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    color: inherit;
+    display: none;
+  }
 }
 
 @media screen and (max-width: 780px) {

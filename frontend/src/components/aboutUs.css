@@ -2,7 +2,7 @@
   margin: 0;
 }
 
-body {
+.about-wrapper {
   text-align: center;
 }
 
@@ -31,7 +31,7 @@ hr {
   margin-top: 4rem;
 }
 .cheerUs p {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .ratingStars {
@@ -39,15 +39,15 @@ hr {
 }
 
 @media screen and (min-width: 1200px) {
-  body {
+  .about-wrapper {
     display: flex;
   }
   .about-us {
     margin: 5rem;
   }
   .cheerUs {
-    padding-left: 10rem;
-    padding-right: 10rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
   }
   .charac-img {
     flex-wrap: nowrap;

@@ -1,0 +1,9 @@
+.charactersContainer {
+  margin: 20px 0 0 20px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1rem;
+  width: 60%;
+  height: 60vh;
+}

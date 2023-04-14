@@ -12,6 +12,7 @@ function Game() {
       <div className="charactersContainer">{characters}</div>
     )
   );
+
 }
 
 export default Game;

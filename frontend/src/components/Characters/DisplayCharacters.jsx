@@ -15,6 +15,7 @@ function DisplayCharacters() {
   }, []);
   return (
     <div
+      // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{ __html: character }}
       style={{ width: "7vw", height: "15vh" }}
     />

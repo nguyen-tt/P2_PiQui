@@ -1,4 +1,5 @@
 // import { Component } from 'react';
+import { Link } from "react-router-dom";
 import "./NavBar.scss";
 import { useState } from "react";
 
@@ -10,29 +11,36 @@ function NavBar() {
   return (
     <nav className={`navbar ${showItems ? "shownav" : "hidenav"} `}>
       <div className="navbarLogo">
-        <h1>PIQUI</h1>
+        <Link to="/">
+          <h1>PIQUI</h1>
+        </Link>
       </div>
       <div>
         <ul className="navbarlist">
           <li className="navbarItems">
-            <a href="index.html" className="navbarLink">
+            <Link to="game" className="navbarLink">
               Jeu
-            </a>
+            </Link>
           </li>
           <li className="navbarItems">
-            <a href="index.html" className="navbarLink">
+            <Link to="rules" className="navbarLink">
               Regle
-            </a>
+            </Link>
           </li>
           <li className="navbarItems">
-            <a href="index.html" className="navbarLink">
+            <Link to="contact" className="navbarLink">
               Contact
-            </a>
+            </Link>
           </li>
           <li className="navbarItems">
-            <a href="index.html" className="navbarLink">
+            <Link to="cheers" className="navbarLink">
               Soutenez-nous
-            </a>
+            </Link>
+          </li>
+          <li className="navbarItems">
+            <Link to="aboutUs" className="navbarLink">
+              Qui somme nous?
+            </Link>
           </li>
         </ul>
         <button

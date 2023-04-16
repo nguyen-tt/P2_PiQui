@@ -11,7 +11,7 @@ export default function Home() {
           de lancer une partie!
         </p>
         <p>Sinon vous pouvez directement jouer!</p>
-        <Link to="game">
+        <Link to="game" className="playbtn">
           <button type="button">PLAY</button>
         </Link>
       </div>

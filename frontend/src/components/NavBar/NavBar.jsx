@@ -12,7 +12,7 @@ function NavBar() {
     <nav className={`navbar ${showItems ? "shownav" : "hidenav"} `}>
       <div className="navbarLogo">
         <Link to="/" className="navbarLink">
-          <h1>PIQUI</h1>
+          <h1>PiQui</h1>
         </Link>
       </div>
       <div>

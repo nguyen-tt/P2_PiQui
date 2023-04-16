@@ -5,7 +5,7 @@
   align-items: center;
   background-color: #ba9ae1;
   color: white;
-  min-width: 100vw;
+  width: 100vw;
   height: 5rem;
 
   h1 {
@@ -32,14 +32,17 @@
     text-decoration: none;
     color: white;
   }
-  .navbarBurger {
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    border: none;
-    color: inherit;
-    display: none;
+  .navbarLogo {
+    z-index: 1000;
   }
+}
+.navbarBurger {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  color: inherit;
+  display: none;
 }
 
 @media screen and (max-width: 780px) {

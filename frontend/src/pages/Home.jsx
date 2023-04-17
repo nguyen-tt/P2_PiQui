@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../components/home.scss";
 
 export default function Home() {
@@ -6,13 +7,13 @@ export default function Home() {
       <div className="homePage">
         <h1>Bienvenue sur PiQui!</h1>
         <p>
-          Vous pouvez consulter les <a href=" ">regles du jeu</a> avant de
-          lancer une partie!
+          Vous pouvez consulter les <Link to="rules">regles du jeu</Link> avant
+          de lancer une partie!
         </p>
         <p>Sinon vous pouvez directement jouer!</p>
-        <button type="button">
-          <a href=" ">PLAY</a>
-        </button>
+        <Link to="game" className="playbtn">
+          <button type="button">PLAY</button>
+        </Link>
       </div>
     </div>
   );

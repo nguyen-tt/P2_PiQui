@@ -1,0 +1,145 @@
+@use "style";
+body {
+  height: 100vh;
+}
+
+.btn-wrapper {
+  display: flex;
+  width: 2.5rem;
+  position: relative;
+  margin-left: 20vh;
+}
+
+.criteria {
+  display: flex;
+  flex-direction: column;
+  // align-items: flex-end;
+  // margin: auto 2rem auto auto;
+  // width: 100vw;
+  height: 12rem;
+  justify-content: space-between;
+}
+
+.criteriaButtons {
+  background-color: #f7c96a;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 10px;
+
+  .imageHair,
+  .imageHat {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  .imageGlasses,
+  .imageMoustache {
+    height: 1rem;
+    width: 2rem;
+    position: relative;
+    right: 0.2rem;
+    top: 0.2rem;
+  }
+}
+
+.sideNav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+  height: 10rem;
+  position: absolute;
+  right: 3rem;
+  bottom: 1rem;
+
+  button {
+    border-radius: 50%;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .round1 {
+    background: #d9b97b;
+  }
+
+  .round2 {
+    background: #c93305;
+  }
+
+  .round3 {
+    background: #724133;
+  }
+
+  .round4 {
+    background: #2d1c19;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .criteria {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100vh;
+  }
+
+  .criteriaButtons {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .imageHat .imageHair {
+    height: 2rem;
+    width: 2rem;
+    position: initial;
+  }
+
+  // .criteriaButtons img {
+  //   height: 2rem;
+  //   width: 2rem;
+  // }
+
+  // .imageGlasses {
+  //   height:1.5rem;
+
+  // }
+
+  // .imageMoustache {
+  //   height:1.5rem;
+
+  // }
+}
+
+@media screen and (min-width: 1024px) {
+  .criteria {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100vh;
+    margin: 0 0 5rem 0;
+  }
+
+  .criteriaButtons {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  .criteriaButtons .imageMoustache {
+    height: 1.5rem;
+    width: 3rem;
+  }
+
+  .criteriaButtons .imageGlasses {
+    height: 1.5rem;
+    width: 3rem;
+  }
+}
+
+// .arrow {
+//   width: 0rem;
+//   height: 0rem;
+//   border-top: 10px solid transparent;
+//   border-bottom: 10px solid transparent;
+//   border-right: 16px solid style.$secondary-color;
+// }

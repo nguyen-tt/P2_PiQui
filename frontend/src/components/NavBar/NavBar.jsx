@@ -11,8 +11,8 @@ function NavBar() {
   return (
     <nav className={`navbar ${showItems ? "shownav" : "hidenav"} `}>
       <div className="navbarLogo">
-        <Link to="/">
-          <h1>PIQUI</h1>
+        <Link to="/" className="navbarLink">
+          <h1>PiQui</h1>
         </Link>
       </div>
       <div>
@@ -30,11 +30,6 @@ function NavBar() {
           <li className="navbarItems">
             <Link to="contact" className="navbarLink">
               Contact
-            </Link>
-          </li>
-          <li className="navbarItems">
-            <Link to="cheers" className="navbarLink">
-              Soutenez-nous
             </Link>
           </li>
           <li className="navbarItems">

@@ -1,5 +1,6 @@
-import DisplayCharacters from "@components/Characters/DisplayCharacters";
+import DisplayCharacters from "../components/Characters/DisplayCharacters";
 import "../components/Characters/Game.scss";
+import CriteriaBtn from "../components/Game/CriteriaBtn";
 
 function Game() {
   const characters = [];
@@ -8,9 +9,12 @@ function Game() {
   }
 
   return (
-    characters.length === 32 && (
-      <div className="charactersContainer">{characters}</div>
-    )
+    <div className="GamePage">
+      {characters.length === 32 && (
+        <div className="charactersContainer">{characters}</div>
+      )}
+      <CriteriaBtn />
+    </div>
   );
 }
 

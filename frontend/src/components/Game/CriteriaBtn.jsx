@@ -1,8 +1,6 @@
 import "./styleCriteriaBtn.scss";
 import { useState } from "react";
 
-// import ToggleColors from "./Game/ToggleColors";
-
 function CriteriaBtn() {
   const [showColors, setShowColors] = useState(false);
 
@@ -15,7 +13,7 @@ function CriteriaBtn() {
       <div className="criteria">
         <button type="button" className="criteriaButtons">
           <img
-            src="src/assets/alaric.png"
+            src="src/assets/glasses.png"
             className="imageGlasses"
             alt="illustration lunettes"
           />
@@ -24,18 +22,17 @@ function CriteriaBtn() {
         <button
           type="button"
           className="criteriaButtons"
-          id="hair"
           onClick={toggleColors}
         >
           <img
-            src="src/assets/amani.png"
-            alt="illustration cheveux"
-            className="imageHair"
+            src="src/assets/colorPicker.png"
+            alt="illustration choix de couleur"
+            className="imageColorPicker"
           />
         </button>
         <button type="button" className="criteriaButtons">
           <img
-            src="src/assets/amani.png"
+            src="src/assets/hat.png"
             alt="illustration chapeau"
             className="imageHat"
           />
@@ -43,7 +40,7 @@ function CriteriaBtn() {
         <button type="button" className="criteriaButtons">
           <img
             className="imageMoustache"
-            src="src/assets/avatartest.png"
+            src="src/assets/moustache.png"
             alt="illustration moustache"
           />
         </button>

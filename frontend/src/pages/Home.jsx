@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "../components/home.scss";
+import UselessFactsApi from "@components/Home.jsx/UselessFactsApi";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <Link to="game" className="playbtn">
           <button type="button">PLAY</button>
         </Link>
+        <UselessFactsApi />
       </div>
     </div>
   );

@@ -11,7 +11,7 @@ function CriteriaBtn() {
   return (
     <div className="btn-wrapper">
       <div className="criteria">
-        <button type="button" className="criteriaButtons">
+        <button type="button" className="criteriaButtons" id="criteriaGlasses">
           <img
             src="src/assets/glasses.png"
             className="imageGlasses"
@@ -23,6 +23,7 @@ function CriteriaBtn() {
           type="button"
           className="criteriaButtons"
           onClick={toggleColors}
+          id="criteriaFurColor"
         >
           <img
             src="src/assets/colorPicker.png"
@@ -30,14 +31,18 @@ function CriteriaBtn() {
             className="imageColorPicker"
           />
         </button>
-        <button type="button" className="criteriaButtons">
+        <button
+          type="button"
+          className="criteriaButtons"
+          id="criteriaHeadAccessories"
+        >
           <img
             src="src/assets/hat.png"
             alt="illustration chapeau"
             className="imageHat"
           />
         </button>
-        <button type="button" className="criteriaButtons">
+        <button type="button" className="criteriaButtons" id="criteriaCollar">
           <img
             className="imageCollar"
             src="src/assets/collar.png"

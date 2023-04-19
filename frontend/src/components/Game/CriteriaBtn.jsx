@@ -39,29 +39,25 @@ function CriteriaBtn() {
         </button>
         <button type="button" className="criteriaButtons">
           <img
-            className="imageMoustache"
-            src="src/assets/moustache.png"
-            alt="illustration moustache"
+            className="imageCollar"
+            src="src/assets/collar.png"
+            alt="illustration collier"
           />
         </button>
       </div>
       {showColors && (
         <div className="sideNav">
-          <button
-            type="button"
-            className="round1"
-            aria-label="blond criteria"
-          />
-          <button type="button" className="round2" aria-label="red criteria" />
+          <button type="button" className="round1" aria-label="white fur" />
+          <button type="button" className="round2" aria-label="yellow fur" />
           <button
             type="button"
             className="round3"
-            aria-label="brown criteria"
+            aria-label="dark yellow fur"
           />
-          <button type="button" className="round4" aria-label="red criteria" />
-          <button type="button" className="round5" aria-label="red criteria" />
-          <button type="button" className="round6" aria-label="red criteria" />
-          <button type="button" className="round7" aria-label="red criteria" />
+          <button type="button" className="round4" aria-label="orange fur" />
+          <button type="button" className="round5" aria-label="pink fur" />
+          <button type="button" className="round6" aria-label="dark red fur" />
+          <button type="button" className="round7" aria-label="grey fur" />
         </div>
       )}
     </div>

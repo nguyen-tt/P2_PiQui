@@ -60,7 +60,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) and (orientation: portrait) {
   .btn-wrapper {
     height: 6rem;
     flex-direction: column;
@@ -80,9 +80,49 @@
     bottom: 4rem;
     width: 10rem;
   }
+}
+
+@media screen and (min-width: 768px) {
+  .btn-wrapper {
+    height: 6rem;
+    flex-direction: column;
+    width: 15rem;
+    margin: 4rem auto;
+  }
+  .criteria {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .sideNav {
+    flex-direction: row;
+    justify-content: space-between;
+    bottom: 4rem;
+    width: 10rem;
+  }
 
   .criteriaButtons {
     height: 3rem;
     width: 3rem;
+  }
+}
+
+@media screen and (max-height: 768px) and (orientation: landscape) {
+  .criteria {
+    flex-direction: column;
+  }
+  .sideNav {
+    flex-direction: column;
+    right: 3rem;
+    bottom: 1rem;
+    width: auto;
+    height: 10rem;
+  }
+  .btn-wrapper {
+    height: fit-content;
+    margin: auto 2rem;
+    width: auto;
+    height: 15rem;
   }
 }

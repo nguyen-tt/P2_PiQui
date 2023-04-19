@@ -44,19 +44,25 @@
   }
 
   .round1 {
-    background: #d9b97b;
+    background: #e1b55d;
   }
-
   .round2 {
-    background: #c93305;
+    background: #fbf7cb;
   }
-
   .round3 {
-    background: #724133;
+    background: #8d474f;
   }
-
   .round4 {
-    background: #2d1c19;
+    background: #ffa653;
+  }
+  .round7 {
+    background: #f06b98;
+  }
+  .round8 {
+    background: #ffdd5b;
+  }
+  .round9 {
+    background: #5a5a5a;
   }
 }
 
@@ -78,7 +84,6 @@
     flex-direction: row;
     justify-content: space-between;
     bottom: 4rem;
-    width: 10rem;
   }
 }
 

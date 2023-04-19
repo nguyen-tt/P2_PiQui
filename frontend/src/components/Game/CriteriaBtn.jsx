@@ -58,7 +58,10 @@ function CriteriaBtn() {
             className="round3"
             aria-label="brown criteria"
           />
-          <button type="button" className="round4" aria-label="dark criteria" />
+          <button type="button" className="round4" aria-label="red criteria" />
+          <button type="button" className="round5" aria-label="red criteria" />
+          <button type="button" className="round6" aria-label="red criteria" />
+          <button type="button" className="round7" aria-label="red criteria" />
         </div>
       )}
     </div>

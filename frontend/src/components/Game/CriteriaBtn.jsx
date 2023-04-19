@@ -52,17 +52,48 @@ function CriteriaBtn() {
       </div>
       {showColors && (
         <div className="sideNav">
-          <button type="button" className="round1" aria-label="white fur" />
-          <button type="button" className="round2" aria-label="yellow fur" />
+          <button
+            type="button"
+            className="round1"
+            aria-label="white fur"
+            id="whiteFurCriteria"
+          />
+          <button
+            type="button"
+            className="round2"
+            aria-label="yellow fur"
+            id="yellowFurCriteria"
+          />
           <button
             type="button"
             className="round3"
             aria-label="dark yellow fur"
+            id="darkyellowFurCriteria"
           />
-          <button type="button" className="round4" aria-label="orange fur" />
-          <button type="button" className="round5" aria-label="pink fur" />
-          <button type="button" className="round6" aria-label="dark red fur" />
-          <button type="button" className="round7" aria-label="grey fur" />
+          <button
+            type="button"
+            className="round4"
+            aria-label="orange fur"
+            id="orangeFurCriteria"
+          />
+          <button
+            type="button"
+            className="round5"
+            aria-label="pink fur"
+            id="pinkFurCriteria"
+          />
+          <button
+            type="button"
+            className="round6"
+            aria-label="dark red fur"
+            id="darkRedFurCriteria"
+          />
+          <button
+            type="button"
+            className="round7"
+            aria-label="grey fur"
+            id="greyFurCriteria"
+          />
         </div>
       )}
     </div>

@@ -26,6 +26,12 @@
       width: 4rem;
     }
   }
+
+  .rightside {
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -37,6 +43,11 @@
   .GamePage {
     align-items: flex-start;
   }
+  .rightside {
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -44,6 +55,11 @@
     img {
       width: 7rem;
     }
+  }
+  .rightside {
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
   }
 }
 

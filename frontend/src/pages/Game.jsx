@@ -37,19 +37,11 @@ function Game() {
             </button>
           ))}
         </div>
-        <CriteriaBtn />
+        <CriteriaBtn crit={crit} setCrit={setCrit} />
       </div>
 
       <div className="rightSide">
-        <img src={char.src} alt="random cat" />
-        <button type="button" onClick={handleRandomCharSelect}>
-          generate random cat to guess
-        </button>
-        <p>Did i pick the right avatar ?</p>
-        <p>{isAvatar.toString()}</p>
-      </div>
-      <CriteriaBtn crit={crit} setCrit={setCrit} />
-      <div className="rightside">
+        <img src={char.src} alt="random cat" className="guess" />
         <button
           type="button"
           onClick={handleRandomCharSelect}
@@ -57,13 +49,14 @@ function Game() {
         >
           generate random cat to guess
         </button>
-        <img src={char.src} alt="random cat" className="guess" />
         <CheckCharacter
           src={char.src}
           id={char.id}
           criteria={char.criteria}
           crit={crit}
         />
+        <p>Did i pick the right avatar ?</p>
+        <p>{isAvatar.toString()}</p>
       </div>
     </div>
   );

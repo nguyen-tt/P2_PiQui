@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import list from "@components/Characters/CharactersList";
+import CheckCharacter from "@components/Game/CheckCharacter";
 import "../components/Characters/Game.scss";
 import CriteriaBtn from "../components/Game/CriteriaBtn";
 
 function Game() {
   const [char, setChar] = useState({});
   const [isAvatar, setIsAvatar] = useState(false);
+  const [crit, setCrit] = useState("");
 
   const handleRandomCharSelect = () => {
     const choosenId = Math.floor(Math.random() * 32);
@@ -45,6 +47,23 @@ function Game() {
         </button>
         <p>Did i pick the right avatar ?</p>
         <p>{isAvatar.toString()}</p>
+      </div>
+      <CriteriaBtn crit={crit} setCrit={setCrit} />
+      <div className="rightside">
+        <button
+          type="button"
+          onClick={handleRandomCharSelect}
+          className="generate"
+        >
+          generate random cat to guess
+        </button>
+        <img src={char.src} alt="random cat" className="guess" />
+        <CheckCharacter
+          src={char.src}
+          id={char.id}
+          criteria={char.criteria}
+          crit={crit}
+        />
       </div>
     </div>
   );

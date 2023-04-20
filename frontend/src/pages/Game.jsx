@@ -26,8 +26,12 @@ function Game() {
       <div className="leftSide">
         <div className="charactersContainer">
           {list.map((item) => (
-            <button type="button" key={item.id} onClick={() => handleClick(item.id)}>
-              <img src={item.src} alt="cat"  />
+            <button
+              type="button"
+              key={item.id}
+              onClick={() => handleClick(item.id)}
+            >
+              <img src={item.src} alt="cat" />
             </button>
           ))}
         </div>

@@ -5,7 +5,6 @@ import list from "@components/Characters/CharactersList";
 
 function CriteriaBtn({ crit, setCrit }) {
   const [showColors, setShowColors] = useState(false);
-  const [crit, setCrit] = useState("");
 
   const toggleColors = () => {
     setShowColors(!showColors);

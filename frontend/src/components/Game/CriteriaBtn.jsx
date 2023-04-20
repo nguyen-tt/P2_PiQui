@@ -1,8 +1,9 @@
 import "./styleCriteriaBtn.scss";
 import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import list from "@components/Characters/CharactersList";
 
-function CriteriaBtn() {
+function CriteriaBtn({ crit, setCrit }) {
   const [showColors, setShowColors] = useState(false);
   const [crit, setCrit] = useState("");
 
@@ -11,7 +12,7 @@ function CriteriaBtn() {
   };
 
   const handleCriteria = (e) => {
-    setCrit(e.target.getAttribute("value"));
+    setCrit(e.target.value);
   };
   const compareCrit = () => {
     return list.filter((cat) => cat.criteria.includes(crit));
@@ -140,4 +141,8 @@ function CriteriaBtn() {
   );
 }
 
+CriteriaBtn.propTypes = {
+  crit: PropTypes.string.isRequired,
+  setCrit: PropTypes.func.isRequired,
+};
 export default CriteriaBtn;

@@ -1,7 +1,7 @@
 import "./styleCriteriaBtn.scss";
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import list from "@components/Characters/CharactersList";
+import list from "../Characters/CharactersList";
 
 function CriteriaBtn({ crit, setCrit }) {
   const [showColors, setShowColors] = useState(false);

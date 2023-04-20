@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 function CheckCharacter({ criteria, crit }) {
   return (
     <div className="checkChar">
-      {criteria.includes(crit) ? <p>yes</p> : <p>no</p>}
+      {criteria && criteria.includes(crit) ? <p>yes</p> : <p>no</p>}
     </div>
   );
 }

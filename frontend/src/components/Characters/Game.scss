@@ -13,6 +13,10 @@
     width: fit-content;
   }
 
+  .outGame {
+    filter: grayscale(100%);
+  }
+
   .rightSide {
     display: flex;
     flex-direction: column;

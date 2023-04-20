@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import "./CheckCharacters.scss";
 
 function CheckCharacter({ criteria, crit }) {
   return (

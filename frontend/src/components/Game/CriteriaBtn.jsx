@@ -11,7 +11,7 @@ function CriteriaBtn({ crit, setCrit }) {
   };
 
   const handleCriteria = (e) => {
-    setCrit(e.target.value);
+    setCrit(e);
   };
   const compareCrit = () => {
     return list.filter((cat) => cat.criteria.includes(crit));
@@ -20,119 +20,96 @@ function CriteriaBtn({ crit, setCrit }) {
   useEffect(() => {
     compareCrit();
   }, [crit]);
+
   return (
     <div className="btn-wrapper">
       <div className="criteria">
         <button
           type="button"
           className="criteriaButtons"
-          id="criteriaGlasses"
           value="glasses"
-          onClick={handleCriteria}
+          onClick={(e) => handleCriteria(e.currentTarget.value)}
         >
-          <img
-            src="src/assets/glasses.png"
-            className="imageGlasses"
-            alt="illustration lunettes"
-          />
+          <img src="src/assets/glasses.png" alt="illustration lunettes" />
         </button>
 
         <button
           type="button"
           className="criteriaButtons"
           onClick={toggleColors}
-          id="criteriaFurColor"
         >
           <img
             src="src/assets/colorPicker.png"
             alt="illustration choix de couleur"
-            className="imageColorPicker"
           />
         </button>
         <button
           type="button"
           className="criteriaButtons"
-          id="criteriaHeadAccessories"
           value="accessories"
-          onClick={handleCriteria}
+          onClick={(e) => handleCriteria(e.currentTarget.value)}
         >
-          <img
-            src="src/assets/hat.png"
-            alt="illustration chapeau"
-            className="imageHat"
-          />
+          <img src="src/assets/hat.png" alt="illustration chapeau" />
         </button>
         <button
           type="button"
           className="criteriaButtons"
-          id="criteriaCollar"
           value="collar"
-          onClick={handleCriteria}
+          onClick={(e) => handleCriteria(e.currentTarget.value)}
         >
-          <img
-            className="imageCollar"
-            src="src/assets/collar.png"
-            alt="illustration collier"
-          />
+          <img src="src/assets/collar.png" alt="illustration collier" />
         </button>
       </div>
       {showColors && (
         <div className="sideNav">
           <button
+            aria-label="white"
             type="button"
             className="round1"
-            aria-label="white fur"
-            id="whiteFurCriteria"
             value="white"
-            onClick={handleCriteria}
+            onClick={(e) => handleCriteria(e.currentTarget.value)}
           />
           <button
+            aria-label="yellow"
             type="button"
             className="round2"
-            aria-label="yellow fur"
-            id="yellowFurCriteria"
             value="yellow"
-            onClick={handleCriteria}
+            onClick={(e) => handleCriteria(e.currentTarget.value)}
           />
           <button
+            aria-label="dark yellow"
             type="button"
             className="round3"
-            aria-label="dark yellow fur"
-            id="darkyellowFurCriteria"
             value="dark yellow"
-            onClick={handleCriteria}
+            onClick={(e) => handleCriteria(e.currentTarget.value)}
           />
           <button
+            aria-label="orange"
             type="button"
             className="round4"
-            aria-label="orange fur"
-            id="orangeFurCriteria"
             value="orange"
-            onClick={handleCriteria}
+            onClick={(e) => handleCriteria(e.currentTarget.value)}
           />
           <button
+            aria-label="pink"
             type="button"
             className="round5"
-            aria-label="pink fur"
-            id="pinkFurCriteria"
             value="pink"
-            onClick={handleCriteria}
+            onClick={(e) => handleCriteria(e.currentTarget.value)}
           />
           <button
+            aria-label="dark red"
             type="button"
             className="round6"
-            aria-label="dark red fur"
-            id="darkRedFurCriteria"
             value="dark red"
-            onClick={handleCriteria}
+            onClick={(e) => handleCriteria(e.currentTarget.value)}
           />
           <button
+            aria-label="dark grey"
             type="button"
             className="round7"
-            aria-label="grey fur"
-            id="greyFurCriteria"
             value="dark grey"
-            onClick={handleCriteria}
+            onClick={(e) => handleCriteria(e.currentTarget.value)}
           />
         </div>
       )}

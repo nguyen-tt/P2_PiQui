@@ -9,6 +9,8 @@ function Game() {
   const [char, setChar] = useState({});
   const [isAvatar, setIsAvatar] = useState(false);
   const [crit, setCrit] = useState("");
+  const [inGame, setInGame] = useState(list);
+  const [outGame, setOutGame] = useState([]);
 
   const handleRandomCharSelect = () => {
     const choosenId = Math.floor(Math.random() * 32);
@@ -32,6 +34,7 @@ function Game() {
             <button
               type="button"
               key={item.id}
+              className="cats"
               onClick={() => handleClick(item.id)}
             >
               <img src={item.src} alt="cat" />
@@ -39,6 +42,9 @@ function Game() {
           ))}
         </div>
         <CriteriaBtn crit={crit} setCrit={setCrit} />
+        {inGame.map((cat) => (
+          <img src={cat.src} alt="inGame cats" />
+        ))}
       </div>
 
       <div className="rightSide">
@@ -55,6 +61,10 @@ function Game() {
           id={char.id}
           criteria={char.criteria}
           crit={crit}
+          inGame={inGame}
+          setInGame={setInGame}
+          outGame={outGame}
+          setOutGame={setOutGame}
         />
         <p>Did i pick the right avatar ?</p>
         <p>{isAvatar.toString()}</p>

@@ -7,12 +7,12 @@ function CheckCharacter({
   crit,
   inGame,
   setInGame,
-  outGame,
+  // outGame,
   setOutGame,
 }) {
   // props: criteria is array criteria of mistery cat
   // crit is the criteria selected with the button
-  const cats = document.querySelectorAll(".cats");
+  // const cats = document.querySelectorAll(".cats");
 
   function filtering() {
     if (criteria.includes(crit)) {
@@ -27,13 +27,13 @@ function CheckCharacter({
   useEffect(() => {
     if (criteria) {
       filtering();
-      if (outGame) {
-        // if criteria clicked is true then outGame is empty
-        const result = outGame.filter((item) =>
-          cats.some((cat) => item.id === parseInt(cat.key, 10))
-        );
-        result.map((btn) => btn.classList.add("outGame"));
-      }
+      // if (outGame) {
+      //   // if criteria clicked is true then outGame is empty
+      //   const result = outGame.filter((item) =>
+      //     cats.some((cat) => item.id === parseInt(cat.key, 10))
+      //   );
+      //   result.map((btn) => btn.classList.add("outGame"));
+      // }
     }
   }, [crit]);
 
@@ -59,7 +59,7 @@ CheckCharacter.propTypes = {
   crit: PropTypes.string.isRequired,
   inGame: PropTypes.isRequired,
   setInGame: PropTypes.func.isRequired,
-  outGame: PropTypes.isRequired,
+  // outGame: PropTypes.isRequired,
   setOutGame: PropTypes.func.isRequired,
 };
 

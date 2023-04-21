@@ -3,7 +3,6 @@ import list from "../components/Characters/CharactersList";
 import CheckCharacter from "../components/Game/CheckCharacter";
 import "../components/Characters/Game.scss";
 import CriteriaBtn from "../components/Game/CriteriaBtn";
-import ReplayBtn from "../components/Game/ReplayBtn";
 
 function Game() {
   const [char, setChar] = useState({});
@@ -25,6 +24,12 @@ function Game() {
   useEffect(() => {
     handleRandomCharSelect();
   }, []);
+
+  // fonction bouton replay//
+  function launchNewGame() {
+    handleRandomCharSelect();
+    setInGame(list);
+  }
 
   return (
     <div className="GamePage">
@@ -68,7 +73,9 @@ function Game() {
         />
         <p>Did i pick the right avatar ?</p>
         <p>{isAvatar.toString()}</p>
-        <ReplayBtn />
+        <button type="button" onClick={launchNewGame}>
+          Rejouer
+        </button>
       </div>
     </div>
   );

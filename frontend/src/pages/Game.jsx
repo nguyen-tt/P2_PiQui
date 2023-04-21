@@ -48,9 +48,6 @@ function Game() {
           ))}
         </div>
         <CriteriaBtn crit={crit} setCrit={setCrit} />
-        {inGame.map((cat) => (
-          <img src={cat.src} alt="inGame cats" />
-        ))}
       </div>
 
       <div className="rightSide">

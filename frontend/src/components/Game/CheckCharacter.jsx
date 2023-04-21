@@ -1,15 +1,9 @@
 import PropTypes from "prop-types";
 import "./CheckCharacters.scss";
 import { useEffect } from "react";
+import list from "@components/Characters/CharactersList";
 
-function CheckCharacter({
-  criteria,
-  crit,
-  inGame,
-  setInGame,
-  outGame,
-  setOutGame,
-}) {
+function CheckCharacter({ criteria, crit, inGame, setInGame }) {
   // props: criteria is array criteria of mistery cat
   // crit is the criteria selected with the button
   const btns = document.querySelectorAll(".cats");
@@ -17,17 +11,22 @@ function CheckCharacter({
   function filtering() {
     if (criteria.includes(crit)) {
       setInGame(inGame.filter((item) => item.criteria.includes(crit)));
-      setOutGame(inGame.filter((item) => !item.criteria.includes(crit)));
+      for (const i of inGame) {
+        if (!i.criteria.includes(crit)) i.active = false;
+      }
     } else {
       setInGame(inGame.filter((item) => !item.criteria.includes(crit)));
-      setOutGame(inGame.filter((item) => item.criteria.includes(crit)));
+      for (const i of inGame) {
+        if (i.criteria.includes(crit)) i.active = false;
+      }
     }
   }
 
   // disable cat buttons that do not have the clicked criteria (accessories, glasses, ...)
   useEffect(() => {
     if (criteria) filtering();
-    for (const j of outGame) {
+    const result = list.filter((obj) => obj.active === false);
+    for (const j of result) {
       for (const i of btns) {
         if (j.id === parseInt(i.id, 10)) i.disabled = true;
       }
@@ -52,12 +51,10 @@ function CheckCharacter({
 }
 
 CheckCharacter.propTypes = {
-  criteria: PropTypes.isRequired,
+  criteria: PropTypes.arrayOf.isRequired,
   crit: PropTypes.string.isRequired,
-  inGame: PropTypes.isRequired,
+  inGame: PropTypes.arrayOf.isRequired,
   setInGame: PropTypes.func.isRequired,
-  outGame: PropTypes.isRequired,
-  setOutGame: PropTypes.func.isRequired,
 };
 
 export default CheckCharacter;

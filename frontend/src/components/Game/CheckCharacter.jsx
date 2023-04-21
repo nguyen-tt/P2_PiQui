@@ -12,7 +12,7 @@ function CheckCharacter({
 }) {
   // props: criteria is array criteria of mistery cat
   // crit is the criteria selected with the button
-  // const cats = document.querySelectorAll(".cats");
+  const btns = document.querySelectorAll(".cats");
 
   function filtering() {
     if (criteria.includes(crit)) {
@@ -24,16 +24,13 @@ function CheckCharacter({
     }
   }
 
+  // disable cat buttons that do not have the clicked criteria (accessories, glasses, ...)
   useEffect(() => {
-    if (criteria) {
-      filtering();
-      // if (outGame) {
-      //   // if criteria clicked is true then outGame is empty
-      //   const result = outGame.filter((item) =>
-      //     cats.some((cat) => item.id === parseInt(cat.key, 10))
-      //   );
-      //   result.map((btn) => btn.classList.add("outGame"));
-      // }
+    if (criteria) filtering();
+    for (const j of outGame) {
+      for (const i of btns) {
+        if (j.id === parseInt(i.id, 10)) i.disabled = true;
+      }
     }
   }, [crit]);
 

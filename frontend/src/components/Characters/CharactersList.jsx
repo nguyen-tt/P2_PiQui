@@ -152,7 +152,7 @@ const list = [
   {
     id: 31,
     src: "https://robohash.org/380.png?set=set4&size=90x90",
-    criteria: ["purple", "no spots", "no accessories"],
+    criteria: ["purple", "no spots", "glasses"],
   },
   {
     id: 32,

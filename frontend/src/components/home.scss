@@ -4,6 +4,10 @@
   justify-content: start;
   height: 90vh;
   min-width: 100vw;
+  background-image: url(@assets/bghome.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .container-homePage {

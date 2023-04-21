@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import list from "@components/Characters/CharactersList";
-import CheckCharacter from "@components/Game/CheckCharacter";
+import list from "../components/Characters/CharactersList";
+import CheckCharacter from "../components/Game/CheckCharacter";
 import "../components/Characters/Game.scss";
 import CriteriaBtn from "../components/Game/CriteriaBtn";
 import ReplayBtn from "../components/Game/ReplayBtn";

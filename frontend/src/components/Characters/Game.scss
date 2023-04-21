@@ -13,7 +13,8 @@
     width: fit-content;
   }
 
-  .outGame {
+  button:disabled,
+  button[disabled] {
     filter: grayscale(100%);
   }
 

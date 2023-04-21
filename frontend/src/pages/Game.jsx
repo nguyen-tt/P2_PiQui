@@ -33,6 +33,7 @@ function Game() {
             <button
               type="button"
               key={item.id}
+              id={item.id}
               className="cats"
               onClick={() => handleClick(item.id)}
             >

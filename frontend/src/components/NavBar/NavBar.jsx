@@ -23,7 +23,7 @@ function NavBar() {
           </li>
           <li className="navbarItems">
             <Link to="rules" className="navbarLink">
-              Regle
+              Règles
             </Link>
           </li>
           <li className="navbarItems">

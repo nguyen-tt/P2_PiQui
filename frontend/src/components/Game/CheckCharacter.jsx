@@ -7,7 +7,7 @@ function CheckCharacter({
   crit,
   inGame,
   setInGame,
-  // outGame,
+  outGame,
   setOutGame,
 }) {
   // props: criteria is array criteria of mistery cat
@@ -56,7 +56,7 @@ CheckCharacter.propTypes = {
   crit: PropTypes.string.isRequired,
   inGame: PropTypes.isRequired,
   setInGame: PropTypes.func.isRequired,
-  // outGame: PropTypes.isRequired,
+  outGame: PropTypes.isRequired,
   setOutGame: PropTypes.func.isRequired,
 };
 

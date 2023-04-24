@@ -1,3 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+
+@font-face {
+  font-family: "Rocher";
+  src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+}
+@font-palette-values --Purples {
+  font-family: Rocher;
+  base-palette: 6;
+}
+
 .centering-home {
   display: flex;
   align-items: center;
@@ -13,12 +24,21 @@
   flex-direction: column;
 
   h1 {
-    font-size: 3rem;
+    font-family: "Rocher";
+    font-palette: --Purples;
+    font-size: 4rem;
     margin-bottom: 2rem;
   }
 
-  p {
-    font-size: 1.2rem;
+  .rules-link-text {
+    font-size: 1.6rem;
+    font-family: "Patrick Hand", cursive;
+    font-style: italic;
+  }
+
+  #facts {
+    font-size: 1.3rem;
+    font-family: "Patrick Hand", cursive;
   }
 
   .playbtn {
@@ -152,5 +172,6 @@
 @media screen and (min-width: 768px) {
   .container-homePage {
     margin-left: 10%;
+    width: 40rem;
   }
 }

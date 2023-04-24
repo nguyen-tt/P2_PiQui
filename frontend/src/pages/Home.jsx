@@ -16,11 +16,11 @@ export default function Home() {
 
       <div className="container-homePage">
         <h1>Bienvenue sur PiQui !</h1>
-        <p>
+        <p className="rules-link-text">
           Vous pouvez consulter les <Link to="rules">règles du jeu</Link> avant
           de lancer une partie!
         </p>
-        <p>Sinon vous pouvez directement jouer!</p>
+        <p className="rules-link-text">Sinon vous pouvez directement jouer!</p>
         <Link to="game" className="playbtn">
           <button type="button">JOUER</button>
         </Link>

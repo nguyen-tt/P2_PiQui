@@ -58,6 +58,10 @@
       background-color: #ba9ae1;
       border: 1px solid #fff;
       border-radius: 20px;
+      transition: transform 400ms;
+      &:hover{
+        transform: scale(1.15);
+      }
     }
   }
 }

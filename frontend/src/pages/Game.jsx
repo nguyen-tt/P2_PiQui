@@ -17,9 +17,10 @@ function Game() {
     setChar(choosenOne);
     setIsAvatar(false);
   };
+
   function handleClick(e, item) {
     setIsAvatar(item.id === char.id);
-    item.id !== char.id && e.currentTarget.classList.add("disabled");
+    return item.id !== char.id && e.currentTarget.classList.add("disabled");
   }
 
   useEffect(() => {

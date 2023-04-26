@@ -43,6 +43,11 @@
   }
 }
 
+.guess {
+  filter: brightness(0);
+  width: 7rem;
+}
+
 @media screen and (max-width: 768px) and (orientation: portrait) {
   .charactersContainer {
     grid-template-columns: repeat(4, 1fr);

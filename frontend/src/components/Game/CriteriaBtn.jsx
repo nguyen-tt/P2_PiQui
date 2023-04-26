@@ -10,10 +10,20 @@ function CriteriaBtn({ crit, setCrit }) {
     setShowColors(!showColors);
   };
 
+  function handleDisplayAnswer() {
+    const toChange = document.querySelector(".images");
+    toChange.classList.remove("notDisplayed");
+    setTimeout(() => {
+      toChange.classList.add("notDisplayed");
+    }, 2000);
+  }
+
   const handleCriteria = (e) => {
     setCrit(e.currentTarget.value);
     e.currentTarget.classList.add("disabled");
+    handleDisplayAnswer();
   };
+
   const compareCrit = () => {
     return list.filter((cat) => cat.criteria.includes(crit));
   };

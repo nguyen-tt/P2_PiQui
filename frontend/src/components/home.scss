@@ -4,10 +4,6 @@
   font-family: "Rocher";
   src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
 }
-@font-palette-values --Purples {
-  font-family: Rocher;
-  base-palette: 6;
-}
 
 .centering-home {
   display: flex;
@@ -15,7 +11,6 @@
   justify-content: start;
   height: 90vh;
   min-width: 100vw;
-  background-image: url(@assets/bghome.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -29,7 +24,6 @@
 
   h1 {
     font-family: "Rocher";
-    font-palette: --Purples;
     font-size: 4rem;
     margin-bottom: 2rem;
   }

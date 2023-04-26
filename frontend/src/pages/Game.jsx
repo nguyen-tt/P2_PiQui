@@ -17,8 +17,10 @@ function Game() {
     setChar(choosenOne);
     setIsAvatar(false);
   };
-  function handleClick(identifier) {
-    setIsAvatar(identifier === char.id);
+
+  function handleClick(e, item) {
+    setIsAvatar(item.id === char.id);
+    return item.id !== char.id && e.currentTarget.classList.add("disabled");
   }
 
   useEffect(() => {
@@ -41,7 +43,7 @@ function Game() {
               key={item.id}
               id={item.id}
               className="cats"
-              onClick={() => handleClick(item.id)}
+              onClick={(e) => handleClick(e, item)}
             >
               <img src={item.src} alt="cat" />
             </button>

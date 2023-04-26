@@ -13,9 +13,15 @@
     width: fit-content;
   }
 
+  .disabled {
+    filter: grayscale(100%);
+    pointer-events: none;
+  }
+
   button:disabled,
   button[disabled] {
     filter: grayscale(100%);
+    pointer-events: none;
   }
 
   .rightSide {

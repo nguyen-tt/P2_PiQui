@@ -9,7 +9,8 @@ function Game() {
   const [isAvatar, setIsAvatar] = useState(false);
   const [crit, setCrit] = useState("");
   const [inGame, setInGame] = useState(list);
-  const [outGame, setOutGame] = useState([]);
+
+  const disabled = document.querySelectorAll(".disabled");
 
   const handleRandomCharSelect = () => {
     const choosenId = Math.floor(Math.random() * 32);
@@ -31,6 +32,13 @@ function Game() {
   function launchNewGame() {
     handleRandomCharSelect();
     setInGame(list);
+    setCrit("");
+    for (const i of disabled) {
+      i.classList.remove("disabled");
+    }
+    for (const i of list) {
+      i.active = true;
+    }
   }
 
   return (
@@ -53,7 +61,11 @@ function Game() {
       </div>
 
       <div className="rightSide">
-        <img src={char.src} alt="random cat" className="guess" />
+        <img
+          src={isAvatar ? char.src : "https://robohash.org/Alaric?set=set4"}
+          alt="random cat"
+          className={!isAvatar && "guess"}
+        />
         <button
           type="button"
           onClick={handleRandomCharSelect}
@@ -68,8 +80,6 @@ function Game() {
           crit={crit}
           inGame={inGame}
           setInGame={setInGame}
-          outGame={outGame}
-          setOutGame={setOutGame}
         />
         <p>Did i pick the right avatar ?</p>
         <p>{isAvatar.toString()}</p>

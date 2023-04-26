@@ -1,14 +1,15 @@
+@import "../_style";
+
 .navbar {
   display: flex;
   flex-wrap: wrap; /*Mettre le menu burger en mobile first au lieu du flex wrap */
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(186, 154, 225);
+  background-color: $main-color;
   color: white;
   height: 4rem;
-  box-shadow: 0px 2px 2px rgb(186, 154, 225, 0.5),
-    0px 4px 4px rgb(186, 154, 225, 0.5), 0px 8px 8px rgb(186, 154, 225, 0.5),
-    0px 16px 16px rgb(186, 154, 225, 0.5);
+  box-shadow: 0px 2px 2px $gradient-color, 0px 4px 4px $gradient-color,
+    0px 8px 8px $gradient-color, 0px 16px 16px $gradient-color;
   position: relative;
   padding: 0 20px;
   box-sizing: border-box;
@@ -24,9 +25,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: -2px 0px 2px rgb(186, 154, 225, 0.5),
-      -4px 0px 4px rgb(186, 154, 225, 0.5), -8px 0px 8px rgb(186, 154, 225, 0.5),
-      -16px 0px 16px rgb(186, 154, 225, 0.5);
+    box-shadow: -2px 0px 2px $gradient-color, -4px 0px 4px $gradient-color,
+      -8px 0px 8px $gradient-color, -16px 0px 16px $gradient-color;
     width: 350px;
 
     .navbarItems {
@@ -65,7 +65,7 @@
     bottom: 0;
     height: 100vh;
     padding: 2rem;
-    background-color: #ba9ae1;
+    background-color: $main-color;
     visibility: hidden;
     z-index: 10;
   }

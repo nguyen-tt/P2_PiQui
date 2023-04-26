@@ -23,7 +23,14 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    border: solid 2px black;
+    border-radius: 20px;
   }
+}
+
+.guess {
+  filter: brightness(0);
+  width: 7rem;
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait) {

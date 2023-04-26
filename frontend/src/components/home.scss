@@ -1,3 +1,4 @@
+@use "./game/gameVar";
 @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
 
 @font-face {
@@ -57,7 +58,7 @@
       border: 1px solid #fff;
       border-radius: 20px;
       transition: transform 400ms;
-      &:hover{
+      &:hover {
         transform: scale(1.15);
       }
     }

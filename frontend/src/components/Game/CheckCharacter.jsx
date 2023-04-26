@@ -28,7 +28,7 @@ function CheckCharacter({ criteria, crit, inGame, setInGame }) {
     const result = list.filter((obj) => obj.active === false);
     for (const j of result) {
       for (const i of btns) {
-        if (j.id === parseInt(i.id, 10)) i.disabled = true;
+        if (j.id === parseInt(i.id, 10)) i.classList.add("disabled");
       }
     }
   }, [crit]);

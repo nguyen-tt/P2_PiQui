@@ -61,7 +61,11 @@ function Game() {
       </div>
 
       <div className="rightSide">
-        <img src={char.src} alt="random cat" className="guess" />
+        <img
+          src={isAvatar ? char.src : "https://robohash.org/Alaric?set=set4"}
+          alt="random cat"
+          className={!isAvatar && "guess"}
+        />
         <button
           type="button"
           onClick={handleRandomCharSelect}

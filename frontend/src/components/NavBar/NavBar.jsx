@@ -1,15 +1,19 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./NavBar.scss";
 import { useState } from "react";
 
 function NavBar() {
   const [showItems, setShowItems] = useState(false);
+  const { pseudo } = useParams();
+
   function handleShowsItems() {
     setShowItems(!showItems);
   }
+
   return (
     <nav className={`navbar ${showItems ? "shownav" : "hidenav"} `}>
       <div className="navbarLogo">
+        {pseudo && <p>hello {pseudo} !</p>}
         <Link to="/" className="navbarLink">
           <h1>PiQui</h1>
         </Link>
@@ -17,24 +21,51 @@ function NavBar() {
       <div>
         <ul className="navbarlist">
           <li className="navbarItems">
-            <Link to="game" className="navbarLink">
-              Jeu
-            </Link>
+            {pseudo ? (
+              <Link to={`/game/${pseudo}`} className="navbarLink">
+                Jeu
+              </Link>
+            ) : (
+              <Link to="/game" className="navbarLink">
+                Jeu
+              </Link>
+            )}
           </li>
+
           <li className="navbarItems">
-            <Link to="rules" className="navbarLink">
-              Règles
-            </Link>
+            {pseudo ? (
+              <Link to={`/rules/${pseudo}`} className="navbarLink">
+                Règles
+              </Link>
+            ) : (
+              <Link to="/rules" className="navbarLink">
+                Règles
+              </Link>
+            )}
           </li>
+
           <li className="navbarItems">
-            <Link to="contact" className="navbarLink">
-              Contact
-            </Link>
+            {pseudo ? (
+              <Link to={`/contact/${pseudo}`} className="navbarLink">
+                Contact
+              </Link>
+            ) : (
+              <Link to="/contact" className="navbarLink">
+                Contact
+              </Link>
+            )}
           </li>
+
           <li className="navbarItems">
-            <Link to="aboutUs" className="navbarLink">
-              Qui sommes-nous ?
-            </Link>
+            {pseudo ? (
+              <Link to={`/aboutUs/${pseudo}`} className="navbarLink">
+                Qui sommes-nous ?
+              </Link>
+            ) : (
+              <Link to="/aboutUs" className="navbarLink">
+                Qui sommes-nous ?
+              </Link>
+            )}
           </li>
         </ul>
         <button

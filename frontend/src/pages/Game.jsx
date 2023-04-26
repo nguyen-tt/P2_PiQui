@@ -61,18 +61,22 @@ function Game() {
       </div>
 
       <div className="rightSide">
-        <img
+        <figure>
+           <img
           src={isAvatar ? char.src : "https://robohash.org/Alaric?set=set4"}
           alt="random cat"
           className={!isAvatar && "guess"}
         />
-        <button
-          type="button"
-          onClick={handleRandomCharSelect}
-          className="generate"
-        >
-          generate random cat to guess
-        </button>
+          <figcaption>Devine le chat mystère!</figcaption>
+        </figure>
+        {isAvatar && (
+          <div>
+            <p>BRAVO!</p>
+            <button type="button" onClick={launchNewGame}>
+              Rejouer
+            </button>
+          </div>
+        )}
         <CheckCharacter
           src={char.src}
           id={char.id}
@@ -81,11 +85,6 @@ function Game() {
           inGame={inGame}
           setInGame={setInGame}
         />
-        <p>Did i pick the right avatar ?</p>
-        <p>{isAvatar.toString()}</p>
-        <button type="button" onClick={launchNewGame}>
-          Rejouer
-        </button>
       </div>
     </div>
   );

@@ -11,7 +11,8 @@ function CriteriaBtn({ crit, setCrit }) {
   };
 
   const handleCriteria = (e) => {
-    setCrit(e);
+    setCrit(e.currentTarget.value);
+    e.currentTarget.classList.add("disabled");
   };
   const compareCrit = () => {
     return list.filter((cat) => cat.criteria.includes(crit));
@@ -28,7 +29,7 @@ function CriteriaBtn({ crit, setCrit }) {
           type="button"
           className="criteriaButtons"
           value="glasses"
-          onClick={(e) => handleCriteria(e.currentTarget.value)}
+          onClick={(e) => handleCriteria(e)}
         >
           <img src="src/assets/glasses.png" alt="illustration lunettes" />
         </button>
@@ -47,7 +48,7 @@ function CriteriaBtn({ crit, setCrit }) {
           type="button"
           className="criteriaButtons"
           value="accessories"
-          onClick={(e) => handleCriteria(e.currentTarget.value)}
+          onClick={(e) => handleCriteria(e)}
         >
           <img src="src/assets/hat.png" alt="illustration chapeau" />
         </button>
@@ -55,7 +56,7 @@ function CriteriaBtn({ crit, setCrit }) {
           type="button"
           className="criteriaButtons"
           value="collar"
-          onClick={(e) => handleCriteria(e.currentTarget.value)}
+          onClick={(e) => handleCriteria(e)}
         >
           <img src="src/assets/collar.png" alt="illustration collier" />
         </button>
@@ -67,49 +68,49 @@ function CriteriaBtn({ crit, setCrit }) {
             type="button"
             className="round1"
             value="white"
-            onClick={(e) => handleCriteria(e.currentTarget.value)}
+            onClick={(e) => handleCriteria(e)}
           />
           <button
             aria-label="yellow"
             type="button"
             className="round2"
             value="yellow"
-            onClick={(e) => handleCriteria(e.currentTarget.value)}
+            onClick={(e) => handleCriteria(e)}
           />
           <button
             aria-label="dark yellow"
             type="button"
             className="round3"
             value="dark yellow"
-            onClick={(e) => handleCriteria(e.currentTarget.value)}
+            onClick={(e) => handleCriteria(e)}
           />
           <button
             aria-label="orange"
             type="button"
             className="round4"
             value="orange"
-            onClick={(e) => handleCriteria(e.currentTarget.value)}
+            onClick={(e) => handleCriteria(e)}
           />
           <button
             aria-label="pink"
             type="button"
             className="round5"
             value="pink"
-            onClick={(e) => handleCriteria(e.currentTarget.value)}
+            onClick={(e) => handleCriteria(e)}
           />
           <button
             aria-label="dark red"
             type="button"
             className="round6"
             value="dark red"
-            onClick={(e) => handleCriteria(e.currentTarget.value)}
+            onClick={(e) => handleCriteria(e)}
           />
           <button
             aria-label="dark grey"
             type="button"
             className="round7"
             value="dark grey"
-            onClick={(e) => handleCriteria(e.currentTarget.value)}
+            onClick={(e) => handleCriteria(e)}
           />
         </div>
       )}

@@ -3,6 +3,9 @@ import "./CheckCharacters.scss";
 import { useEffect } from "react";
 import list from "@components/Characters/CharactersList";
 
+import yes from "@assets/yes-png.jpg";
+import no from "@assets/no-png.jpg";
+
 function CheckCharacter({ criteria, crit, inGame, setInGame }) {
   // props: criteria is array criteria of mistery cat
   // crit is the criteria selected with the button
@@ -36,15 +39,9 @@ function CheckCharacter({ criteria, crit, inGame, setInGame }) {
   return (
     <div className="checkChar">
       {criteria && criteria.includes(crit) ? (
-        <img
-          src="src/assets/yes-png.jpg"
-          alt="le personnage mystère a bien ce critère"
-        />
+        <img src={yes} alt="le personnage mystère a bien ce critère" />
       ) : (
-        <img
-          src="src/assets/no-png.jpg"
-          alt="le personnage mystère n'a pas ce critère"
-        />
+        <img src={no} alt="le personnage mystère n'a pas ce critère" />
       )}
     </div>
   );

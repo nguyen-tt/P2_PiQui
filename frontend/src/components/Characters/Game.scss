@@ -1,6 +1,6 @@
 @use "../game/gameVar";
+@import "../style";
 
-// default style for desktop display
 .GamePage {
   display: flex;
   justify-content: space-between;
@@ -34,17 +34,36 @@
       }
     }
   }
-
   .disabled {
     filter: grayscale(100%);
     pointer-events: none;
   }
+
   .rightSide {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
+    margin-top: 5rem;
+    gap: 2rem;
+    box-shadow: inset -10px 10px 2px $main-color;
+    border-radius: 20px;
+    height: 60vh;
+
+    figure {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img {
+        width: 7rem;
+      }
+    }
   }
+}
+
+.guess {
+  filter: brightness(0);
+  width: 7rem;
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait) {

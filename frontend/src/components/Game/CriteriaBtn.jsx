@@ -1,6 +1,11 @@
 import "./styleCriteriaBtn.scss";
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
+
+import glasses from "@assets/glasses.png";
+import colorPicker from "@assets/colorPicker.png";
+import hat from "@assets/hat.png";
+import collar from "@assets/collar.png";
 import list from "../Characters/CharactersList";
 
 function CriteriaBtn({ crit, setCrit }) {
@@ -41,7 +46,7 @@ function CriteriaBtn({ crit, setCrit }) {
           value="glasses"
           onClick={(e) => handleCriteria(e)}
         >
-          <img src="src/assets/glasses.png" alt="illustration lunettes" />
+          <img src={glasses} alt="illustration lunettes" />
         </button>
 
         <button
@@ -49,10 +54,7 @@ function CriteriaBtn({ crit, setCrit }) {
           className="criteriaButtons"
           onClick={toggleColors}
         >
-          <img
-            src="src/assets/colorPicker.png"
-            alt="illustration choix de couleur"
-          />
+          <img src={colorPicker} alt="illustration choix de couleur" />
         </button>
         <button
           type="button"
@@ -60,7 +62,7 @@ function CriteriaBtn({ crit, setCrit }) {
           value="accessories"
           onClick={(e) => handleCriteria(e)}
         >
-          <img src="src/assets/hat.png" alt="illustration chapeau" />
+          <img src={hat} alt="illustration chapeau" />
         </button>
         <button
           type="button"
@@ -68,7 +70,7 @@ function CriteriaBtn({ crit, setCrit }) {
           value="collar"
           onClick={(e) => handleCriteria(e)}
         >
-          <img src="src/assets/collar.png" alt="illustration collier" />
+          <img src={collar} alt="illustration collier" />
         </button>
       </div>
       {showColors && (

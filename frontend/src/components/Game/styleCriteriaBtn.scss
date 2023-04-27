@@ -1,131 +1,119 @@
+@use "../style.scss";
+
 .btn-wrapper {
   display: flex;
-  width: 2.5rem;
-  position: relative;
-}
-
-.criteria {
-  display: flex;
-  flex-direction: column;
-  height: 12rem;
+  flex-direction: column-reverse;
   justify-content: space-between;
-}
+  align-items: center;
+  width: style.$btnWrapperWidth;
+  height: 5.5rem;
+  margin: 1.4rem auto 0;
 
-.criteriaButtons {
-  background-color: #f7c96a;
-  height: 2.5rem;
-  width: 2.5rem;
-  border-radius: 10px;
-  display: flex;
-
-  img {
-    height: auto;
-    width: 1.5rem;
-    transform: scale(1.5);
-    margin: auto;
+  .criteria {
+    height: 3rem;
+    width: style.$criteriaWidth;
+    display: flex;
+    justify-content: space-between;
   }
-}
 
-.sideNav {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: end;
-  position: absolute;
-  right: 3rem;
-  bottom: 1rem;
-  height: 15rem;
-
-  button {
-    border-radius: 50%;
+  //TO DO: make the size of .criteriaButtons & img inside responsive
+  .criteriaButtons {
+    background-color: #f7c96a;
+    border-radius: 8px;
+    display: flex;
+    height: 3rem;
+    width: 3rem;
     border: none;
-    width: 2rem;
-    height: 2rem;
-  }
 
-  .round1 {
-    background: #fbf7cb;
+    img {
+      height: auto;
+      width: 1.5rem;
+      transform: scale(1.5);
+      margin: auto;
+    }
   }
-  .round2 {
-    background: #ffdd5b;
-  }
-  .round3 {
-    background: #e1b55d;
-  }
-  .round4 {
-    background: #ffa653;
-  }
-  .round5 {
-    background: #f06b98;
-  }
-  .round6 {
-    background: #8d474f;
-  }
-  .round7 {
-    background: #5a5a5a;
+  .sideNav {
+    display: flex;
+    justify-content: space-between;
+    width: style.$sideNavWidth;
+
+    button {
+      border-radius: 50%;
+      border: none;
+      width: 2rem;
+      height: 2rem;
+    }
+
+    .round1 {
+      background: #fbf7cb;
+    }
+    .round2 {
+      background: #ffdd5b;
+    }
+    .round3 {
+      background: #e1b55d;
+    }
+    .round4 {
+      background: #ffa653;
+    }
+    .round5 {
+      background: #f06b98;
+    }
+    .round6 {
+      background: #8d474f;
+    }
+    .round7 {
+      background: #5a5a5a;
+    }
   }
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
   .btn-wrapper {
-    height: 6rem;
-    flex-direction: column;
     width: fit-content;
-    margin: 4rem auto;
-  }
-  .criteria {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    width: 15rem;
-  }
+    margin: 0 auto;
 
-  .sideNav {
-    flex-direction: row;
-    justify-content: space-between;
-    bottom: 4rem;
+    .criteria {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .sideNav {
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-height: 500px) and (orientation: landscape) {
   .btn-wrapper {
-    height: 6rem;
-    flex-direction: column;
-    width: 15rem;
-    margin: 4rem auto;
-  }
-  .criteria {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
+    flex-direction: row-reverse;
+    width: 4.8rem;
+    height: 14rem;
+    margin: 0 0 0 1rem;
 
-  .sideNav {
-    flex-direction: row;
-    justify-content: space-between;
-    bottom: 4rem;
-  }
+    .criteria {
+      width: 2.6rem;
+      flex-direction: column;
+      height: 11rem;
+      justify-content: space-between;
+    }
 
-  .criteriaButtons {
-    height: 3rem;
-    width: 3rem;
-  }
-}
+    .criteriaButtons {
+      display: flex;
+      height: 2.5rem;
+      width: 2.5rem;
 
-@media screen and (max-height: 768px) and (orientation: landscape) {
-  .criteria {
-    flex-direction: column;
-  }
-  .sideNav {
-    flex-direction: column;
-    right: 3rem;
-    bottom: 1rem;
-    width: auto;
-  }
-  .btn-wrapper {
-    height: fit-content;
-    margin: auto 2rem;
-    width: auto;
-    height: 15rem;
+      img {
+        height: auto;
+        width: 1.3rem;
+        transform: scale(1.5);
+        margin: auto;
+      }
+    }
+    .sideNav {
+      flex-direction: column;
+      width: 2.5rem;
+    }
   }
 }

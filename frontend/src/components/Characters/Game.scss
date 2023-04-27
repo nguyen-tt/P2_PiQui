@@ -1,4 +1,3 @@
-@use "../game/gameVar";
 @import "../style";
 
 .GamePage {
@@ -8,7 +7,7 @@
   margin: 20px 20px 0 20px;
 
   .leftSide {
-    width: 65%;
+    width: 62%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -17,7 +16,7 @@
       display: grid;
       grid-template-columns: repeat(8, 1fr);
       grid-template-rows: repeat(4, 1fr);
-      gap: 10px;
+      gap: 8px;
       height: fit-content;
       width: 100%;
 
@@ -32,6 +31,20 @@
         filter: grayscale(100%);
         pointer-events: none;
       }
+    }
+  }
+
+  @media screen and (min-device-height: 769px) and (max-device-height: 1000px) {
+    .leftSide {
+      width: 70vw;
+      height: calc(100vh - 10rem);
+    }
+  }
+
+  @media screen and (min-device-height: 1001px) {
+    .leftSide {
+      width: 75vw;
+      height: calc(100vh - 10rem);
     }
   }
   .disabled {
@@ -69,11 +82,12 @@
 @media screen and (max-width: 768px) and (orientation: portrait) {
   .GamePage {
     .leftSide {
+      width: 65vw;
+
       .charactersContainer {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(8, 1fr);
         gap: 5px;
-        width: 90vw;
       }
     }
 
@@ -84,60 +98,18 @@
     }
   }
 }
-@media screen and (min-device-height: 769px) and (max-device-height: 1000px) {
-  .leftSide {
-    width: 70vw;
-    height: calc(100vh - 10rem);
-  }
-}
 
-@media screen and (min-device-height: 1001px) {
-  .leftSide {
-    width: 75vw;
-    height: calc(100vh - 10rem);
-  }
-}
-// -----------------------------------------
-@media screen and (min-width: 768px) {
-  .charactersContainer {
-    img {
-      width: 5rem;
-    }
-  }
+@media screen and (max-height: 500px) and (orientation: landscape) {
   .GamePage {
-    align-items: flex-start;
-  }
-  .rightside {
-    padding-bottom: 4rem;
-    display: flex;
-    flex-direction: column;
-  }
-}
+    .leftSide {
+      width: 80%;
+      flex-direction: row;
+      align-items: center;
 
-@media screen and (min-width: 1200px) {
-  .charactersContainer {
-    img {
-      width: 7rem;
+      .charactersContainer {
+        gap: 5px;
+        width: 83%;
+      }
     }
-  }
-  .rightside {
-    padding-bottom: 4rem;
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-@media screen and (max-height: 768px) and (orientation: landscape) {
-  .charactersContainer {
-    gap: 5px;
-
-    img {
-      width: 4rem;
-    }
-  }
-
-  .GamePage {
-    flex-direction: row;
-    align-items: normal;
   }
 }

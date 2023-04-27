@@ -43,7 +43,7 @@ function Game() {
 
   return (
     <div className="GamePage">
-      <div className="background"></div>
+      <div className="background" />
       <div className="leftSide">
         <div className="charactersContainer">
           {list.map((item) => (

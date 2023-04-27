@@ -10,6 +10,7 @@ import "../components/aboutUs.scss";
 function AboutUs() {
   return (
     <div className="about-wrapper">
+      <div className="background"></div>
       <div className="about-us">
         <figure className="thank-img">
           <img src={thankyou} alt="Thank you !" />

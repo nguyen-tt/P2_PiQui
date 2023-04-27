@@ -3,9 +3,6 @@ import "./CheckCharacters.scss";
 import { useEffect } from "react";
 import list from "@components/Characters/CharactersList";
 
-import yes from "@assets/yes-png.jpg";
-import no from "@assets/no-png.jpg";
-
 function CheckCharacter({ criteria, crit, inGame, setInGame }) {
   // props: criteria is array criteria of mistery cat
   // crit is the criteria selected with the button

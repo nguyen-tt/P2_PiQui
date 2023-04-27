@@ -78,9 +78,9 @@ function Game() {
           </div>
         )}
         <CheckCharacter
-          src={char.src}
-          id={char.id}
-          criteria={char.criteria}
+          src={char && char.src}
+          id={char && char.id}
+          criteria={char && char.criteria}
           crit={crit}
           inGame={inGame}
           setInGame={setInGame}

@@ -40,6 +40,7 @@ export default function Rules() {
 
   return (
     <div className="centering">
+      <div className="background" />
       <div className="bubble-content">
         <div className="content1">
           <p>{rulesPages[textIndex].message}</p>

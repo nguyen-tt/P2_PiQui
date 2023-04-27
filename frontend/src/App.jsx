@@ -1,7 +1,7 @@
 /* eslint-disable import/no-unresolved */
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "@pages/Home";
-import "./App.css";
+import "./App.scss";
 import Game from "@pages/Game";
 import Rules from "@pages/Rules";
 import Form from "@pages/Form";

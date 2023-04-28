@@ -1,10 +1,10 @@
-import thankyou from "../assets/thankyou.png";
 import charlotte from "../assets/charlotte.png";
 import alaric from "../assets/alaric.png";
 import trung from "../assets/trung.png";
 import amani from "../assets/amani.png";
-import avatartest from "../assets/avatartest.png";
-import stars from "../assets/stars.jpg";
+import rudy from "../assets/rudy.png";
+import catheart from "../assets/catheart.png";
+import thankyou from "../assets/thankyou.png";
 import "../components/aboutUs.scss";
 
 function AboutUs() {
@@ -16,15 +16,15 @@ function AboutUs() {
           <img src={thankyou} alt="Thank you !" />
         </figure>
         <figure className="charac-img">
-          <div className="alaric-container">
+          <div className="team-container">
             <img className="alaric" src={alaric} alt="Alaric character" />
             <figcaption>Alaric</figcaption>
           </div>
-          <div className="amani-container">
+          <div className="team-container">
             <img className="amani" src={amani} alt="Amani character" />
             <figcaption>Amani</figcaption>
           </div>
-          <div className="charlotte-container">
+          <div className="team-container">
             <img
               className="charlotte"
               src={charlotte}
@@ -32,11 +32,11 @@ function AboutUs() {
             />
             <figcaption>Charlotte</figcaption>
           </div>
-          <div className="rudy-container">
-            <img className="rudy" src={avatartest} alt="Rudy character" />
+          <div className="team-container">
+            <img className="rudy" src={rudy} alt="Rudy character" />
             <figcaption>Rudy</figcaption>
           </div>
-          <div className="trung-container">
+          <div className="team-container">
             <img className="trung" src={trung} alt="Trung character" />
             <figcaption>Trung</figcaption>
           </div>
@@ -44,6 +44,7 @@ function AboutUs() {
       </div>
       <hr />
       <div className="cheerUs">
+        <img className="cat-heart" src={catheart} alt="cat heart" />
         <h1>Miaou!</h1>
         <br />
         <p>Bienvenue sur la page de notre jeu web !</p>
@@ -67,7 +68,6 @@ function AboutUs() {
           Si vous êtes un amoureux des chats et que vous cherchez un jeu de
           société amusant et interactif pour jouer, vous êtes au bon endroit.
         </p>
-        <img className="ratingStars" src={stars} alt="rating stars" />
       </div>
     </div>
   );

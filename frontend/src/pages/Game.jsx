@@ -70,14 +70,6 @@ function Game() {
           />
           <figcaption>Devine le chat mystère!</figcaption>
         </figure>
-        {isAvatar && (
-          <div>
-            <p>BRAVO!</p>
-            <button type="button" onClick={launchNewGame}>
-              Rejouer
-            </button>
-          </div>
-        )}
         <CheckCharacter
           src={char.src}
           id={char.id}
@@ -86,6 +78,14 @@ function Game() {
           inGame={inGame}
           setInGame={setInGame}
         />
+        {isAvatar && (
+          <div>
+            <p>BRAVO !</p>
+            <button id="replay" type="button" onClick={launchNewGame}>
+              Rejouer
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

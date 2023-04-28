@@ -117,13 +117,6 @@ function CriteriaBtn({ crit, setCrit }) {
             value="dark red"
             onClick={(e) => handleCriteria(e)}
           />
-          <button
-            aria-label="dark grey"
-            type="button"
-            className="round7"
-            value="dark grey"
-            onClick={(e) => handleCriteria(e)}
-          />
         </div>
       )}
     </div>

@@ -43,6 +43,7 @@ function Game() {
 
   return (
     <div className="GamePage">
+      <div className="background" />
       <div className="leftSide">
         <div className="charactersContainer">
           {list.map((item) => (
@@ -69,14 +70,6 @@ function Game() {
           />
           <figcaption>Devine le chat mystère!</figcaption>
         </figure>
-        {isAvatar && (
-          <div>
-            <p>BRAVO!</p>
-            <button type="button" onClick={launchNewGame}>
-              Rejouer
-            </button>
-          </div>
-        )}
         <CheckCharacter
           src={char && char.src}
           id={char && char.id}
@@ -85,6 +78,14 @@ function Game() {
           inGame={inGame}
           setInGame={setInGame}
         />
+        {isAvatar && (
+          <div>
+            <p>BRAVO !</p>
+            <button id="replay" type="button" onClick={launchNewGame}>
+              Rejouer
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

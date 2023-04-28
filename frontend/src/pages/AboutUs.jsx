@@ -10,6 +10,7 @@ import "../components/aboutUs.scss";
 function AboutUs() {
   return (
     <div className="about-wrapper">
+      <div className="background" />
       <div className="about-us">
         <figure className="thank-img">
           <img src={thankyou} alt="Thank you !" />
@@ -43,28 +44,28 @@ function AboutUs() {
       </div>
       <hr />
       <div className="cheerUs">
-        <h1>Soutenez-nous!</h1>
+        <h1>Miaou!</h1>
         <br />
-        <p>Bienvenue sur la page de soutien de notre jeu web !</p>
+        <p>Bienvenue sur la page de notre jeu web !</p>
         <br />
         <p>
-          Nous sommes ravis que vous ayez choisi de jouer à notre jeu et nous
-          sommes là pour vous aider à profiter pleinement de votre expérience de
-          jeu.
+          Nous sommes un groupe de développeurs passionnés de chats, et nous
+          avons créé un jeu "Qui est-ce ?" unique en son genre. Avec notre amour
+          pour les chats et notre expertise en développement de jeux, nous avons
+          créé un jeu amusant et engageant qui met en scène nos amis félins
+          préférés.
         </p>
         <br />
         <p>
-          Nous comprenons que parfois vous pouvez rencontrer des défis
-          techniques, des questions sur le gameplay ou des problèmes de compte,
-          et nous sommes là pour vous offrir notre soutien et résoudre vos
-          problèmes.
+          Nous avons soigneusement conçu chaque chat dans notre jeu avec des
+          traits de personnalité uniques pour rendre le jeu encore plus amusant
+          et excitant. Nous sommes fiers de notre création et nous espérons que
+          vous apprécierez autant que nous avons aimé le créer.
         </p>
         <br />
         <p>
-          Que vous soyez un nouveau joueur ou que vous ayez déjà de l'expérience
-          dans notre jeu, nous sommes déterminés à vous offrir un soutien de
-          qualité pour vous aider à profiter pleinement de l'univers de jeu que
-          nous avons créé.
+          Si vous êtes un amoureux des chats et que vous cherchez un jeu de
+          société amusant et interactif pour jouer, vous êtes au bon endroit.
         </p>
         <img className="ratingStars" src={stars} alt="rating stars" />
       </div>

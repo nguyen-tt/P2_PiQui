@@ -37,13 +37,13 @@ function CheckCharacter({ criteria, crit, inGame, setInGame }) {
       {criteria && criteria.includes(crit) ? (
         <img
           className="images notDisplayed"
-          src="src/assets/yes-png.jpg"
+          src="../src/assets/yes-png.jpg"
           alt="le personnage mystère a bien ce critère"
         />
       ) : (
         <img
           className="images notDisplayed"
-          src="src/assets/no-png.jpg"
+          src="../src/assets/no-png.jpg"
           alt="le personnage mystère n'a pas ce critère"
         />
       )}

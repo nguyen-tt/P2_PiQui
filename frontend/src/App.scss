@@ -9,7 +9,9 @@ body {
   position: relative;
   box-sizing: border-box;
 }
-
+button {
+  cursor: pointer;
+}
 .background {
   background: url("@assets/background.jpg") no-repeat top center;
   background-size: cover;

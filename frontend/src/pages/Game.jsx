@@ -66,7 +66,7 @@ function Game() {
           <img
             src={isAvatar ? char.src : "https://robohash.org/Alaric?set=set4"}
             alt="random cat"
-            className={!isAvatar && "guess"}
+            className={isAvatar ? "winner" : "guess"}
           />
           <figcaption>Devine le chat mystère!</figcaption>
         </figure>

@@ -8,7 +8,7 @@ import hat from "@assets/hat.png";
 import collar from "@assets/collar.png";
 import list from "../Characters/CharactersList";
 
-function CriteriaBtn({ crit, setCrit }) {
+function CriteriaBtn({ crit, setCrit, setCritCounter }) {
   const [showColors, setShowColors] = useState(false);
 
   const toggleColors = () => {
@@ -24,6 +24,7 @@ function CriteriaBtn({ crit, setCrit }) {
   }
 
   const handleCriteria = (e) => {
+    setCritCounter((counter) => counter - 1);
     setCrit(e.currentTarget.value);
     e.currentTarget.classList.add("disabled");
     handleDisplayAnswer();
@@ -133,5 +134,6 @@ function CriteriaBtn({ crit, setCrit }) {
 CriteriaBtn.propTypes = {
   crit: PropTypes.string.isRequired,
   setCrit: PropTypes.func.isRequired,
+  setCritCounter: PropTypes.func.isRequired,
 };
 export default CriteriaBtn;

@@ -24,7 +24,7 @@ function Game() {
   function handleClick(e, item) {
     setTries((counter) => counter - 1);
     setIsAvatar(item.id === char.id);
-    return item.id !== char.id && e.currentTarget.classList.add("disabled");
+    return !isAvatar && e.currentTarget.classList.add("disabled");
   }
 
   useEffect(() => {
@@ -33,8 +33,8 @@ function Game() {
 
   // fonction bouton replay//
   function launchNewGame() {
-    setCritCounter(5);
-    setTries(3);
+    setCritCounter(50);
+    setTries(50);
     handleRandomCharSelect();
     setInGame(list);
     setCrit("");
@@ -46,7 +46,9 @@ function Game() {
     }
   }
 
-  const classSwitch = ["cats", tries < 0 && "disabled"].join(" ");
+  const classSwitch = ["cats", (tries === 0 || isAvatar) && "disabled"].join(
+    " "
+  );
 
   return (
     <div className="GamePage">
@@ -84,7 +86,7 @@ function Game() {
           />
           <figcaption>Devine le chat mystère!</figcaption>
         </figure>
-        <p>essai restant: {tries >= 0 ? tries : "C'est loose. Déso frérot"}</p>
+        <p>essai restant: {tries > 0 ? tries : "C'est loose. Déso frérot"}</p>
         <p>critères restant: {critCounter}</p>
         <CheckCharacter
           src={char && char.src}
@@ -94,7 +96,7 @@ function Game() {
           inGame={inGame}
           setInGame={setInGame}
         />
-        {(isAvatar || tries < 0) && (
+        {(isAvatar || tries <= 0) && (
           <div>
             {isAvatar ? <p>Bravo</p> : <p>Dommage</p>}
             <button id="replay" type="button" onClick={launchNewGame}>

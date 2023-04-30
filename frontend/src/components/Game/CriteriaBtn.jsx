@@ -47,7 +47,7 @@ function CriteriaBtn({
 
   const looseAddClass = [
     "btn-wrapper",
-    (critCounter === 0 || tries < 0 || isAvatar) && "loose",
+    (critCounter === 0 || tries === 0 || isAvatar) && "loose",
   ].join(" ");
 
   return (

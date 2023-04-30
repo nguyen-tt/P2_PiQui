@@ -33,8 +33,8 @@ function Game() {
 
   // fonction bouton replay//
   function launchNewGame() {
-    setCritCounter(50);
-    setTries(50);
+    setCritCounter(5);
+    setTries(3);
     handleRandomCharSelect();
     setInGame(list);
     setCrit("");
@@ -84,7 +84,9 @@ function Game() {
             alt="random cat"
             className={isAvatar ? "winner" : "guess"}
           />
-          <figcaption>Devine le chat mystère!</figcaption>
+          <figcaption>
+            {isAvatar ? "C'est lui!" : "Devine le chat mystère!"}
+          </figcaption>
         </figure>
         <p>essai restant: {tries > 0 ? tries : "C'est loose. Déso frérot"}</p>
         <p>critères restant: {critCounter}</p>

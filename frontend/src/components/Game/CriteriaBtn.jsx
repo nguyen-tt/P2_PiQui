@@ -6,6 +6,7 @@ import glasses from "@assets/glasses.png";
 import colorPicker from "@assets/colorPicker.png";
 import hat from "@assets/hat.png";
 import collar from "@assets/collar.png";
+import spots from "@assets/spot.png";
 import list from "../Characters/CharactersList";
 
 function CriteriaBtn({ crit, setCrit }) {
@@ -71,6 +72,14 @@ function CriteriaBtn({ crit, setCrit }) {
           onClick={(e) => handleCriteria(e)}
         >
           <img src={collar} alt="illustration collier" />
+        </button>
+        <button
+          type="button"
+          className="criteriaButtons"
+          value="spots"
+          onClick={(e) => handleCriteria(e)}
+        >
+          <img src={spots} alt="illustration tâches" />
         </button>
       </div>
       {showColors && (

@@ -10,7 +10,7 @@ function Game() {
   const [crit, setCrit] = useState("");
   const [inGame, setInGame] = useState(list);
   const [tries, setTries] = useState(3);
-  const [critCounter, setCritCounter] = useState(3);
+  const [critCounter, setCritCounter] = useState(5);
 
   const disabled = document.querySelectorAll(".disabled");
 
@@ -33,7 +33,7 @@ function Game() {
 
   // fonction bouton replay//
   function launchNewGame() {
-    setCritCounter(3);
+    setCritCounter(5);
     setTries(3);
     handleRandomCharSelect();
     setInGame(list);
@@ -70,6 +70,8 @@ function Game() {
           setCrit={setCrit}
           critCounter={critCounter}
           setCritCounter={setCritCounter}
+          tries={tries}
+          isAvatar={isAvatar}
         />
       </div>
 
@@ -82,8 +84,8 @@ function Game() {
           />
           <figcaption>Devine le chat mystère!</figcaption>
         </figure>
-        <p>coup restant: {tries >= 0 ? tries : "C'est loose. Déso frérot"}</p>
-        <p>essai restant: {critCounter}</p>
+        <p>essai restant: {tries >= 0 ? tries : "C'est loose. Déso frérot"}</p>
+        <p>critères restant: {critCounter}</p>
         <CheckCharacter
           src={char && char.src}
           id={char && char.id}

@@ -29,7 +29,7 @@
         filter: grayscale(0);
         transform: rotateX(180deg);
         img {
-          display: none;
+          filter: opacity(0);
         }
       }
 
@@ -162,6 +162,30 @@
 }
 .winner {
   height: 7rem;
+  transition: ease 1s;
+  animation: win 3s, beat 2s infinite 3s;
+}
+
+@keyframes win {
+  0% {
+    transform: scale(2) translate(-20vw, 50%);
+  }
+  50% {
+    transform: scale(2) translate(-20vw, 50%);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes beat {
+  0% {
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+  }
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait) {

@@ -76,6 +76,11 @@
   }
 }
 
+.loose button {
+  filter: grayscale(100%);
+  pointer-events: none;
+}
+
 @media screen and (max-width: 768px) and (orientation: portrait) {
   .btn-wrapper {
     width: fit-content;

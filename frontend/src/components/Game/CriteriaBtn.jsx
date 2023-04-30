@@ -9,7 +9,14 @@ import collar from "@assets/collar.png";
 import spots from "@assets/spot.png";
 import list from "../Characters/CharactersList";
 
-function CriteriaBtn({ crit, setCrit }) {
+function CriteriaBtn({
+  crit,
+  setCrit,
+  setCritCounter,
+  critCounter,
+  tries,
+  isAvatar,
+}) {
   const [showColors, setShowColors] = useState(false);
 
   const toggleColors = () => {
@@ -25,6 +32,7 @@ function CriteriaBtn({ crit, setCrit }) {
   }
 
   const handleCriteria = (e) => {
+    setCritCounter((counter) => counter - 1);
     setCrit(e.currentTarget.value);
     e.currentTarget.classList.add("disabled");
     handleDisplayAnswer();
@@ -38,8 +46,13 @@ function CriteriaBtn({ crit, setCrit }) {
     compareCrit();
   }, [crit]);
 
+  const looseAddClass = [
+    "btn-wrapper",
+    (critCounter === 0 || tries === 0 || isAvatar) && "loose",
+  ].join(" ");
+
   return (
-    <div className="btn-wrapper">
+    <div className={looseAddClass}>
       <div className="criteria">
         <button
           type="button"
@@ -135,5 +148,9 @@ function CriteriaBtn({ crit, setCrit }) {
 CriteriaBtn.propTypes = {
   crit: PropTypes.string.isRequired,
   setCrit: PropTypes.func.isRequired,
+  setCritCounter: PropTypes.func.isRequired,
+  critCounter: PropTypes.number.isRequired,
+  tries: PropTypes.number.isRequired,
+  isAvatar: PropTypes.func.isRequired,
 };
 export default CriteriaBtn;

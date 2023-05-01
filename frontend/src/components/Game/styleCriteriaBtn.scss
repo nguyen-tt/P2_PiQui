@@ -1,38 +1,37 @@
-@use "../style.scss";
+@import "../style.scss";
 
 .btn-wrapper {
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
   align-items: center;
-  width: style.$btnWrapperWidth;
-  height: 5.5rem;
+  width: $btnWrapperWidth;
+  height: 6rem;
   margin: 1.4rem auto 0;
 
   .criteria {
     height: 3rem;
-    width: style.$criteriaWidth;
+    width: clamp($criteriaMinWidth, 100%, $criteriaMaxWidth);
     display: flex;
     justify-content: space-between;
   }
 
-  //TO DO: make the size of .criteriaButtons & img inside responsive
   .criteriaButtons {
     background-color: #f7c96a;
     border-radius: 10px;
     display: flex;
-    height: 3rem;
-    width: 3rem;
+    justify-content: center;
+    align-items: center;
+    width: min($criteriaBtnWidth, 65px);
+    height: clamp(3rem, 8vw, 4rem);
+    aspect-ratio: 1;
     border: none;
     box-shadow: inset -3px -3px 5px rgb(255, 239, 208),
       inset 3px 3px 5px rgb(163, 106, 1);
     transition: ease-in-out 0.2s;
 
     img {
-      height: auto;
-      width: 1.5rem;
-      transform: scale(1.5);
-      margin: auto;
+      width: 90%;
     }
   }
 
@@ -43,12 +42,13 @@
   .sideNav {
     display: flex;
     justify-content: space-between;
-    width: style.$sideNavWidth;
+    width: $sideNavWidth;
 
     button {
       border-radius: 50%;
       width: 2rem;
       height: 2rem;
+      border: none;
       transition: ease-in-out 0.2s;
     }
 
@@ -98,7 +98,7 @@
   }
 }
 
-@media screen and (max-height: 500px) and (orientation: landscape) {
+@media screen and (max-height: 768px) and (orientation: landscape) {
   .btn-wrapper {
     flex-direction: row-reverse;
     width: 4.8rem;

@@ -50,16 +50,15 @@ function Game() {
     " "
   );
 
-  const conditionnalydispolayAnswer =
-    () => {
-      if (tries > 0) {
-        return tries;
-      }
-      if (isAvatar) {
-        return "c'était moins une!";
-      }
-      return "C'est perdu. Dommage!";
-    };
+  const conditionnalydispolayAnswer = () => {
+    if (tries > 0) {
+      return tries;
+    }
+    if (isAvatar) {
+      return "c'était moins une!";
+    }
+    return "C'est perdu. Dommage!";
+  };
 
   return (
     <div className="GamePage">

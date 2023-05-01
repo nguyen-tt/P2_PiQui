@@ -1,7 +1,6 @@
 import "./styleCriteriaBtn.scss";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import PropTypes from "prop-types";
-
 import glasses from "@assets/glasses.png";
 import colorPicker from "@assets/colorPicker.png";
 import hat from "@assets/hat.png";
@@ -23,28 +22,17 @@ function CriteriaBtn({
     setShowColors(!showColors);
   };
 
-  function handleDisplayAnswer() {
+  const handleCriteria = (e) => {
+    setCritCounter((counter) => counter - 1);
+    setCrit(e.currentTarget.value);
+    e.currentTarget.classList.add("disabled");
     const toChange = document.querySelector(".images");
     toChange.classList.remove("notDisplayed");
     setTimeout(() => {
       toChange.classList.add("notDisplayed");
     }, 2000);
-  }
-
-  const handleCriteria = (e) => {
-    setCritCounter((counter) => counter - 1);
-    setCrit(e.currentTarget.value);
-    e.currentTarget.classList.add("disabled");
-    handleDisplayAnswer();
-  };
-
-  const compareCrit = () => {
     return list.filter((cat) => cat.criteria.includes(crit));
   };
-
-  useEffect(() => {
-    compareCrit();
-  }, [crit]);
 
   const looseAddClass = [
     "btn-wrapper",
@@ -58,7 +46,7 @@ function CriteriaBtn({
           type="button"
           className="criteriaButtons"
           value="glasses"
-          onClick={(e) => handleCriteria(e)}
+          onClick={handleCriteria}
         >
           <img src={glasses} alt="illustration lunettes" />
         </button>
@@ -74,7 +62,7 @@ function CriteriaBtn({
           type="button"
           className="criteriaButtons"
           value="accessories"
-          onClick={(e) => handleCriteria(e)}
+          onClick={handleCriteria}
         >
           <img src={hat} alt="illustration chapeau" />
         </button>
@@ -82,7 +70,7 @@ function CriteriaBtn({
           type="button"
           className="criteriaButtons"
           value="collar"
-          onClick={(e) => handleCriteria(e)}
+          onClick={handleCriteria}
         >
           <img src={collar} alt="illustration collier" />
         </button>
@@ -90,7 +78,7 @@ function CriteriaBtn({
           type="button"
           className="criteriaButtons"
           value="spots"
-          onClick={(e) => handleCriteria(e)}
+          onClick={handleCriteria}
         >
           <img src={spots} alt="illustration tâches" />
         </button>
@@ -102,42 +90,42 @@ function CriteriaBtn({
             type="button"
             className="round1"
             value="white"
-            onClick={(e) => handleCriteria(e)}
+            onClick={handleCriteria}
           />
           <button
             aria-label="yellow"
             type="button"
             className="round2"
             value="yellow"
-            onClick={(e) => handleCriteria(e)}
+            onClick={handleCriteria}
           />
           <button
             aria-label="dark yellow"
             type="button"
             className="round3"
             value="dark yellow"
-            onClick={(e) => handleCriteria(e)}
+            onClick={handleCriteria}
           />
           <button
             aria-label="orange"
             type="button"
             className="round4"
             value="orange"
-            onClick={(e) => handleCriteria(e)}
+            onClick={handleCriteria}
           />
           <button
             aria-label="pink"
             type="button"
             className="round5"
             value="pink"
-            onClick={(e) => handleCriteria(e)}
+            onClick={handleCriteria}
           />
           <button
             aria-label="dark red"
             type="button"
             className="round6"
             value="dark red"
-            onClick={(e) => handleCriteria(e)}
+            onClick={handleCriteria}
           />
         </div>
       )}
@@ -151,6 +139,6 @@ CriteriaBtn.propTypes = {
   setCritCounter: PropTypes.func.isRequired,
   critCounter: PropTypes.number.isRequired,
   tries: PropTypes.number.isRequired,
-  isAvatar: PropTypes.func.isRequired,
+  isAvatar: PropTypes.bool.isRequired,
 };
 export default CriteriaBtn;

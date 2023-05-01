@@ -50,6 +50,16 @@ function Game() {
     " "
   );
 
+  const conditionnalydispolayAnswer = () => {
+    if (tries > 0) {
+      return tries;
+    }
+    if (isAvatar) {
+      return "c'était moins une!";
+    }
+    return "C'est perdu. Dommage!";
+  };
+
   return (
     <div className="GamePage">
       <div className="background" />
@@ -88,7 +98,10 @@ function Game() {
             {isAvatar ? "C'est lui!" : "Devine le chat mystère!"}
           </figcaption>
         </figure>
-        <p>essai restant: {tries > 0 ? tries : "C'est loose. Déso frérot"}</p>
+        <p>
+          essai restant:
+          {conditionnalydispolayAnswer()}
+        </p>
         <p>critères restant: {critCounter}</p>
         <CheckCharacter
           src={char && char.src}

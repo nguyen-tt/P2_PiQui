@@ -13,11 +13,11 @@ function NavBar() {
   return (
     <nav className={`navbar ${showItems ? "shownav" : "hidenav"} `}>
       <div className="navbarLogo">
-        {pseudo && <p>hello {pseudo} !</p>}
         <Link to="/" className="navbarLink">
           <h1>PiQui</h1>
         </Link>
       </div>
+      <div className="navbarPseudo">{pseudo && <p>Chalut {pseudo} !</p>}</div>
       <div>
         <ul className="navbarlist">
           <li className="navbarItems">
@@ -59,11 +59,11 @@ function NavBar() {
           <li className="navbarItems">
             {pseudo ? (
               <Link to={`/aboutUs/${pseudo}`} className="navbarLink">
-                Qui sommes-nous ?
+                L'équipe
               </Link>
             ) : (
               <Link to="/aboutUs" className="navbarLink">
-                Qui sommes-nous ?
+                L'équipe
               </Link>
             )}
           </li>

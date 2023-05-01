@@ -50,7 +50,7 @@ function Game() {
     " "
   );
 
-  const ifElseStatementJustForEsLintAirBnBRulesInsteadANestedTernaryToConditionnalydispolayAnswer =
+  const conditionnalydispolayAnswer =
     () => {
       if (tries > 0) {
         return tries;
@@ -101,7 +101,7 @@ function Game() {
         </figure>
         <p>
           essai restant:
-          {ifElseStatementJustForEsLintAirBnBRulesInsteadANestedTernaryToConditionnalydispolayAnswer()}
+          {conditionnalydispolayAnswer()}
         </p>
         <p>critères restant: {critCounter}</p>
         <CheckCharacter

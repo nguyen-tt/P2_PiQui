@@ -52,9 +52,9 @@ function CheckCharacter({ criteria, crit, inGame, setInGame }) {
 }
 
 CheckCharacter.propTypes = {
-  criteria: PropTypes.arrayOf.isRequired,
+  criteria: PropTypes.arrayOf(PropTypes.string).isRequired,
   crit: PropTypes.string.isRequired,
-  inGame: PropTypes.arrayOf.isRequired,
+  inGame: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.any)).isRequired,
   setInGame: PropTypes.func.isRequired,
 };
 

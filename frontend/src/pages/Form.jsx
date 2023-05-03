@@ -9,7 +9,7 @@ function Form() {
         <div className="form">
           <div className="container-col">
             <div className="col-username">
-              <label htmlFor="username">Prénom</label>
+              <label htmlFor="username">Pseudo</label>
               <input id="username" name="username" type="text" required />
             </div>
 
@@ -24,7 +24,7 @@ function Form() {
             </div>
 
             <button type="submit" className="btn-submit">
-              <span>envoyer</span>
+              <span>Envoyer</span>
               <img
                 src="https://i.cloudup.com/2ZAX3hVsBE-3000x3000.png"
                 alt="validated"

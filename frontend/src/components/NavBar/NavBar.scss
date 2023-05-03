@@ -43,7 +43,7 @@
       button {
         border: none;
         font-family: "Patrick Hand", cursive;
-        font-size: 1.25rem;
+        font-size: clamp(0.8rem, 1.5vw, 1.25rem);
         font-weight: bold;
         letter-spacing: 2.5px;
         color: white;
@@ -58,7 +58,7 @@
       }
       .navbarLink {
         font-family: "Patrick Hand", cursive;
-        font-size: clamp(0.6rem, 20vw, 1.25rem);
+        font-size: clamp(0.8rem, 1.5vw, 1.25rem);
         font-weight: bold;
         letter-spacing: 2.5px;
         &:hover {
@@ -99,7 +99,7 @@
   display: none;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 780px) {
   .navbar .navbarlist {
     flex-direction: column;
     justify-content: center;

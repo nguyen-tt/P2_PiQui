@@ -131,8 +131,8 @@ function Game({ setWins, wins, regiteredPseudo }) {
           <div>
             {isAvatar ? <p>Bravo</p> : <p>Dommage</p>}
             <button id="replay" type="button" onClick={launchNewGame}>
-                Rejouer
-              </button>
+              Rejouer
+            </button>
           </div>
         )}
       </div>

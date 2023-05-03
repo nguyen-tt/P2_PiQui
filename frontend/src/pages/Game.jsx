@@ -17,6 +17,7 @@ function Game({ setWins, wins, registeredPseudo }) {
   const [critCounter, setCritCounter] = useState(5);
 
   const disabled = document.querySelectorAll(".disabled");
+  const [play] = useSound(mp3File);
 
   const handleRandomCharSelect = () => {
     const choosenId = Math.floor(Math.random() * 32);
@@ -47,6 +48,7 @@ function Game({ setWins, wins, registeredPseudo }) {
 
   // fonction bouton replay//
   function launchNewGame() {
+    play();
     setCritCounter(5);
     setTries(3);
     handleRandomCharSelect();
@@ -70,8 +72,6 @@ function Game({ setWins, wins, registeredPseudo }) {
     }
     return 0;
   };
-
-  const [play] = useSound(mp3File);
 
   return (
     <div className="GamePage">
@@ -112,11 +112,12 @@ function Game({ setWins, wins, registeredPseudo }) {
           </figcaption>
         </figure>
         <p>
-          Essais restants: <br />
+          {tries <= 1 ? "Essai restant:" : "Essais restants:"} <br />
           {conditionnalydisplayAnswer()}
         </p>
         <p>
-          Critères restants: <br /> {critCounter}
+          {critCounter <= 1 ? "Critère restant:" : "Critères restants:"} <br />{" "}
+          {critCounter}
         </p>
         <CheckCharacter
           src={char && char.src}
@@ -130,9 +131,7 @@ function Game({ setWins, wins, registeredPseudo }) {
           <div>
             {isAvatar ? <p>Bravo</p> : <p>Dommage</p>}
             <button id="replay" type="button" onClick={launchNewGame}>
-              <button type="submit" onClick={play}>
-                Rejouer
-              </button>
+              Rejouer
             </button>
           </div>
         )}

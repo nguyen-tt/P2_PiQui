@@ -20,7 +20,7 @@ function NavBar({ regiteredPseudo, wins }) {
       </div>
       <div className="navbarPseudo">{pseudo && <p>Chalut {pseudo} !</p>}</div>
       {regiteredPseudo && (
-        <div>
+        <div className="display-acc-name">
           {regiteredPseudo} <br />
           Nombre de victoires: {wins}
         </div>

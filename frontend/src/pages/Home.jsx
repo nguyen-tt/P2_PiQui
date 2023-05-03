@@ -56,11 +56,7 @@ export default function Home({
 
       <div className="container-homePage">
         <h1>Bienvenue sur PiQui !</h1>
-        <p className="rules-link-text">
-          Vous pouvez consulter les <Link to="rules">règles du jeu</Link> avant
-          de lancer une partie !
-        </p>
-        <p className="rules-link-text">Sinon vous pouvez directement jouer !</p>
+        <p className="rules-link-text">Vous pouvez créer un compte...</p>
         {!regiteredPseudo && (
           <div className="register-login">
             <div className="register">
@@ -110,7 +106,14 @@ export default function Home({
             </div>
           </div>
         )}
-        <Pseudo setPseudoInput={setPseudoInput} pseudoInput={pseudoInput} />
+        <p className="rules-link-text">
+          ... Ou consulter les <Link to="rules">règles du jeu</Link> avant de
+          lancer une partie !
+        </p>
+        <p className="rules-link-text">Sinon vous pouvez directement jouer !</p>
+        {!regiteredPseudo && (
+          <Pseudo setPseudoInput={setPseudoInput} pseudoInput={pseudoInput} />
+        )}
         <UselessFactsApi />
       </div>
     </div>

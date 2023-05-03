@@ -77,11 +77,12 @@
       flex-direction: column;
       margin: 4px;
       font-family: "Patrick Hand", cursive;
+      font-size: 1.2rem;
     }
     input {
       margin-top: 0.5rem;
       font-size: 1rem;
-      border-radius: 10px
+      border-radius: 10px;
     }
     button {
       cursor: pointer;
@@ -91,7 +92,7 @@
       background-color: #ba9ae1;
       border: 1px solid #fff;
       border-radius: 20px;
-      margin: 2px auto;
+      margin: 5px auto;
     }
   }
 }
@@ -209,7 +210,6 @@
     width: 40rem;
   }
   .register-login {
-
     display: flex;
   }
 }

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import "@components/Home/pseudo.scss";
 
-export default function Pseudo({ regiteredPseudo }) {
+export default function Pseudo({ registeredPseudo }) {
   const [pseudoInput, setPseudoInput] = useState("");
 
   const handleSubmit = (e) => {
@@ -11,7 +11,7 @@ export default function Pseudo({ regiteredPseudo }) {
   };
   return (
     <form onSubmit={handleSubmit} className="form-home">
-      {!regiteredPseudo && (
+      {!registeredPseudo && (
         <label className="container-pseudo">
           <input
             type="text"
@@ -31,5 +31,5 @@ export default function Pseudo({ regiteredPseudo }) {
   );
 }
 Pseudo.propTypes = {
-  regiteredPseudo: PropTypes.string.isRequired,
+  registeredPseudo: PropTypes.string.isRequired,
 };

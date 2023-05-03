@@ -1,10 +1,14 @@
 import PropTypes from "prop-types";
 import NavBar from "./NavBar/NavBar";
 
-function Layout({ children, regiteredPseudo, wins }) {
+function Layout({ children, setRegisteredPseudo, registeredPseudo, wins }) {
   return (
     <>
-      <NavBar regiteredPseudo={regiteredPseudo} wins={wins} />
+      <NavBar
+        setRegisteredPseudo={setRegisteredPseudo}
+        registeredPseudo={registeredPseudo}
+        wins={wins}
+      />
       {children}
     </>
   );
@@ -12,8 +16,9 @@ function Layout({ children, regiteredPseudo, wins }) {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  regiteredPseudo: PropTypes.string.isRequired,
+  registeredPseudo: PropTypes.string.isRequired,
   wins: PropTypes.number.isRequired,
+  setRegisteredPseudo: PropTypes.func.isRequired,
 };
 
 export default Layout;

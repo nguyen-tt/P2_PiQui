@@ -3,7 +3,7 @@ import "./NavBar.scss";
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-function NavBar({ regiteredPseudo, wins }) {
+function NavBar({ setRegisteredPseudo, registeredPseudo, wins }) {
   const [showItems, setShowItems] = useState(false);
   const { pseudo } = useParams();
 
@@ -19,17 +19,19 @@ function NavBar({ regiteredPseudo, wins }) {
         </Link>
       </div>
       <div className="navbarPseudo">{pseudo && <p>Chalut {pseudo} !</p>}</div>
-      {regiteredPseudo && (
+      {registeredPseudo && (
         <div className="display-acc-name">
-          {regiteredPseudo} <br />
+          {registeredPseudo} <br />
           Nombre de victoires: {wins}
         </div>
       )}
       <div>
         <ul className="navbarlist">
-          {regiteredPseudo && (
+          {registeredPseudo && (
             <li className="navbarItems">
-              <button type="button">Se déconnecter</button>
+              <button type="button" onClick={() => setRegisteredPseudo("")}>
+                Se déconnecter
+              </button>
             </li>
           )}
           <li className="navbarItems">
@@ -93,8 +95,9 @@ function NavBar({ regiteredPseudo, wins }) {
 }
 
 NavBar.propTypes = {
-  regiteredPseudo: PropTypes.string.isRequired,
+  registeredPseudo: PropTypes.string.isRequired,
   wins: PropTypes.number.isRequired,
+  setRegisteredPseudo: PropTypes.func.isRequired,
 };
 
 export default NavBar;

@@ -9,8 +9,8 @@ import axios from "axios";
 export default function Home({
   setPseudoInput,
   pseudoInput,
-  regiteredPseudo,
-  setRegiteredPseudo,
+  registeredPseudo,
+  setRegisteredPseudo,
   setWins,
 }) {
   const [userNameReg, setUserNameReg] = useState("");
@@ -37,7 +37,7 @@ export default function Home({
         if (res.data.message) {
           setLoginStatus(res.data.message);
         } else {
-          setRegiteredPseudo(res.data[0].pseudo);
+          setRegisteredPseudo(res.data[0].pseudo);
           setWins(res.data[0].wins);
         }
       });
@@ -57,7 +57,7 @@ export default function Home({
       <div className="container-homePage">
         <h1>Bienvenue sur PiQui !</h1>
         <p className="rules-link-text">Vous pouvez créer un compte...</p>
-        {!regiteredPseudo && (
+        {!registeredPseudo && (
           <div className="register-login">
             <div className="register">
               <button
@@ -136,7 +136,7 @@ export default function Home({
         <Pseudo
           setPseudoInput={setPseudoInput}
           pseudoInput={pseudoInput}
-          regiteredPseudo={regiteredPseudo}
+          registeredPseudo={registeredPseudo}
         />
         <UselessFactsApi />
       </div>
@@ -147,7 +147,7 @@ export default function Home({
 Home.propTypes = {
   pseudoInput: PropTypes.string.isRequired,
   setPseudoInput: PropTypes.func.isRequired,
-  regiteredPseudo: PropTypes.string.isRequired,
-  setRegiteredPseudo: PropTypes.func.isRequired,
+  registeredPseudo: PropTypes.string.isRequired,
+  setRegisteredPseudo: PropTypes.func.isRequired,
   setWins: PropTypes.func.isRequired,
 };

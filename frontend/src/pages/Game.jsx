@@ -9,20 +9,28 @@ import CheckCharacter from "../components/Game/CheckCharacter";
 import "../components/Characters/Game.scss";
 import CriteriaBtn from "../components/Game/CriteriaBtn";
 
+let newList = [];
+function shuffle() {
+  const shuffledArray = list.sort(() => 0.5 - Math.random());
+  return shuffledArray.slice(0, 32);
+}
+newList = shuffle();
+
 function Game({ setWins, wins, registeredPseudo }) {
   const [char, setChar] = useState({});
   const [isAvatar, setIsAvatar] = useState(false);
   const [crit, setCrit] = useState("");
-  const [inGame, setInGame] = useState(list);
   const [tries, setTries] = useState(3);
   const [critCounter, setCritCounter] = useState(5);
+  const [inGame, setInGame] = useState(newList);
   const [play] = useSound(mp3File);
 
   const disabled = document.querySelectorAll(".disabled");
 
+  // randomly select the mystery character
   const handleRandomCharSelect = () => {
     const choosenId = Math.floor(Math.random() * 32);
-    const choosenOne = list.find((cat) => cat.id === choosenId);
+    const choosenOne = newList.find((cat) => cat.id === choosenId);
     setChar(choosenOne);
     setIsAvatar(false);
   };
@@ -53,12 +61,13 @@ function Game({ setWins, wins, registeredPseudo }) {
     setCritCounter(5);
     setTries(3);
     handleRandomCharSelect();
-    setInGame(list);
+    setInGame(newList);
+    shuffle();
     setCrit("");
     for (const i of disabled) {
       i.classList.remove("disabled");
     }
-    for (const i of list) {
+    for (const i of newList) {
       i.active = true;
     }
   }
@@ -79,17 +88,18 @@ function Game({ setWins, wins, registeredPseudo }) {
       <div className="background" />
       <div className="leftSide">
         <div className="charactersContainer">
-          {list.map((item) => (
-            <button
-              type="button"
-              key={item.id}
-              id={item.id}
-              className={classSwitch}
-              onClick={(e) => handleClick(e, item)}
-            >
-              <img src={item.src} alt="cat" />
-            </button>
-          ))}
+          {newList &&
+            newList.map((item) => (
+              <button
+                type="button"
+                key={item.id}
+                id={item.id}
+                className={classSwitch}
+                onClick={(e) => handleClick(e, item)}
+              >
+                <img src={item.src} alt="cat" />
+              </button>
+            ))}
         </div>
         <CriteriaBtn
           crit={crit}
@@ -126,6 +136,7 @@ function Game({ setWins, wins, registeredPseudo }) {
           crit={crit}
           inGame={inGame}
           setInGame={setInGame}
+          list={newList}
         />
         {(isAvatar || tries <= 0) && (
           <div>

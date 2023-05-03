@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import axios from "axios";
 import useSound from "use-sound";
 import mp3File from "@assets/cat-meow-14536.mp3";
+import guesscat from "@assets/guesscat.png";
 import list from "../components/Characters/CharactersList";
 import CheckCharacter from "../components/Game/CheckCharacter";
 import "../components/Characters/Game.scss";
@@ -103,7 +104,7 @@ function Game({ setWins, wins, registeredPseudo }) {
       <div className="rightSide">
         <figure>
           <img
-            src={isAvatar ? char.src : "https://robohash.org/Alaric?set=set4"}
+            src={isAvatar ? char.src : guesscat}
             alt="random cat"
             className={isAvatar ? "winner" : "guess"}
           />

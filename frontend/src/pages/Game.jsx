@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import axios from "axios";
 import useSound from "use-sound";
-import mp3File from "@assets/cat-meow-14536.mp3";
+import mp3File from "@assets/cats-meow-81221.mp3";
 import guesscat from "@assets/guesscat.png";
 import list from "../components/Characters/CharactersList";
 import CheckCharacter from "../components/Game/CheckCharacter";
@@ -30,7 +30,7 @@ function Game({ setWins, wins, registeredPseudo }) {
   // randomly select the mystery character
   const handleRandomCharSelect = () => {
     const choosenId = Math.floor(Math.random() * 32);
-    const choosenOne = newList.find((cat) => cat.id === choosenId);
+    const choosenOne = newList.find((cat) => cat.id === newList[choosenId].id);
     setChar(choosenOne);
     setIsAvatar(false);
   };
@@ -60,9 +60,9 @@ function Game({ setWins, wins, registeredPseudo }) {
     play();
     setCritCounter(5);
     setTries(3);
+    newList = shuffle();
     handleRandomCharSelect();
     setInGame(newList);
-    shuffle();
     setCrit("");
     for (const i of disabled) {
       i.classList.remove("disabled");

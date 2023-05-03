@@ -55,7 +55,7 @@ CheckCharacter.propTypes = {
   crit: PropTypes.string.isRequired,
   inGame: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.any)).isRequired,
   setInGame: PropTypes.func.isRequired,
-  list: PropTypes.arrayOf(PropTypes.Obj),
+  list: PropTypes.arrayOf(PropTypes.shape),
 };
 
 CheckCharacter.defaultProps = {

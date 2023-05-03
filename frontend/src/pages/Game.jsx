@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import axios from "axios";
+import useSound from "use-sound";
+import mp3File from "@assets/cat-meow-14536.mp3";
+import guesscat from "@assets/guesscat.png";
 import list from "../components/Characters/CharactersList";
 import CheckCharacter from "../components/Game/CheckCharacter";
 import "../components/Characters/Game.scss";
@@ -12,7 +15,6 @@ function shuffle() {
   return shuffledArray.slice(0, 32);
 }
 newList = shuffle();
-
 function Game({ setWins, wins, regiteredPseudo }) {
   const [char, setChar] = useState({});
   const [isAvatar, setIsAvatar] = useState(false);
@@ -42,9 +44,9 @@ function Game({ setWins, wins, regiteredPseudo }) {
   };
 
   useEffect(() => {
-    axios.patch(`${import.meta.env.VITE_BACKEND_URL}/win`, {
+    axios.patch(`${import.meta.env.VITE_BACKEND_URL}/win-counter`, {
       wins,
-      regiteredPseudo,
+      registeredPseudo,
     });
   }, [wins]);
 
@@ -72,15 +74,14 @@ function Game({ setWins, wins, regiteredPseudo }) {
     " "
   );
 
-  const conditionnalydispolayAnswer = () => {
+  const conditionnalydisplayAnswer = () => {
     if (tries > 0) {
       return tries;
     }
-    if (isAvatar) {
-      return "c'était moins une!";
-    }
-    return "C'est perdu. Dommage!";
+    return 0;
   };
+
+  const [play] = useSound(mp3File);
 
   return (
     <div className="GamePage">
@@ -113,7 +114,7 @@ function Game({ setWins, wins, regiteredPseudo }) {
       <div className="rightSide">
         <figure>
           <img
-            src={isAvatar ? char.src : "https://robohash.org/Alaric?set=set4"}
+            src={isAvatar ? char.src : guesscat}
             alt="random cat"
             className={isAvatar ? "winner" : "guess"}
           />
@@ -122,10 +123,12 @@ function Game({ setWins, wins, regiteredPseudo }) {
           </figcaption>
         </figure>
         <p>
-          essai restant:
-          {conditionnalydispolayAnswer()}
+          Essais restants: <br />
+          {conditionnalydisplayAnswer()}
         </p>
-        <p>critères restant: {critCounter}</p>
+        <p>
+          Critères restants: <br /> {critCounter}
+        </p>
         <CheckCharacter
           src={char && char.src}
           id={char && char.id}
@@ -139,7 +142,9 @@ function Game({ setWins, wins, regiteredPseudo }) {
           <div>
             {isAvatar ? <p>Bravo</p> : <p>Dommage</p>}
             <button id="replay" type="button" onClick={launchNewGame}>
-              Rejouer
+              <button type="submit" onClick={play}>
+                Rejouer
+              </button>
             </button>
           </div>
         )}
@@ -151,7 +156,7 @@ function Game({ setWins, wins, regiteredPseudo }) {
 Game.propTypes = {
   wins: PropTypes.number.isRequired,
   setWins: PropTypes.func.isRequired,
-  regiteredPseudo: PropTypes.string.isRequired,
+  registeredPseudo: PropTypes.string.isRequired,
 };
 
 export default Game;

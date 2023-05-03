@@ -19,7 +19,6 @@ function Game({ setWins, wins, registeredPseudo }) {
   const [play] = useSound(mp3File);
 
   const disabled = document.querySelectorAll(".disabled");
-  const [play] = useSound(mp3File);
 
   const handleRandomCharSelect = () => {
     const choosenId = Math.floor(Math.random() * 32);

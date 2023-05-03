@@ -71,7 +71,7 @@ export default function Home({
                 <h2>Inscription</h2>
               </button>
               <div className="register-input">
-                <label htmlFor="regPseudo">pseudo</label>
+                <label htmlFor="regPseudo">Pseudo</label>
                 <input
                   id="regPseudo"
                   type="text"
@@ -79,7 +79,7 @@ export default function Home({
                     setUserNameReg(e.target.value);
                   }}
                 />
-                <label htmlFor="regPassword">mot de passe</label>
+                <label htmlFor="regPassword">Mot de passe</label>
                 <input
                   id="regPassword"
                   type="password"
@@ -101,10 +101,10 @@ export default function Home({
                     .classList.toggle("display");
                 }}
               >
-                <h2>connexion</h2>
+                <h2>Connexion</h2>
               </button>
               <div className="login-input">
-                <label htmlFor="pseudo">pseudo</label>
+                <label htmlFor="pseudo">Pseudo</label>
                 <input
                   id="pseudo"
                   type="text"
@@ -112,7 +112,7 @@ export default function Home({
                     setUserName(e.target.value);
                   }}
                 />
-                <label htmlFor="password">mot de passe</label>
+                <label htmlFor="password">Mot de passe</label>
                 <input
                   id="password"
                   type="password"

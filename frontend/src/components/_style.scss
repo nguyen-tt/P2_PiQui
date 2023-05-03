@@ -1,4 +1,5 @@
 $main-color: rgb(186, 154, 225);
+$secondary-color: #d5e9b7;
 $gradient-color: rgb(186, 154, 225, 0.5);
 
 $btnWrapperWidth: clamp(18rem, 80%, 25rem);
@@ -7,3 +8,6 @@ $criteriaMaxWidth: 20rem;
 $sideNavWidth: 15rem;
 $nbBtn: 4;
 $criteriaBtnWidth: calc(90% / $nbBtn);
+
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+$primary-font: "Patrick Hand", cursive;

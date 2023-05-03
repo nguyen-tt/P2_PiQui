@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import "@components/Home/pseudo.scss";
+import useSound from "use-sound";
+import mp3File from "@assets/cat-meow-14536.mp3";
 
 export default function Pseudo({ registeredPseudo }) {
   const [pseudoInput, setPseudoInput] = useState("");
@@ -9,6 +11,7 @@ export default function Pseudo({ registeredPseudo }) {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
+  const [play] = useSound(mp3File);
   return (
     <form onSubmit={handleSubmit} className="form-home">
       {!registeredPseudo && (
@@ -23,7 +26,7 @@ export default function Pseudo({ registeredPseudo }) {
         </label>
       )}
       <Link to={`/game/${pseudoInput}`} className="playbtn">
-        <button type="submit" className="btnhome">
+        <button type="submit" onClick={play} className="btnhome">
           Jouer
         </button>
       </Link>

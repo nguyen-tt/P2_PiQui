@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import axios from "axios";
+import useSound from "use-sound";
+import mp3File from "@assets/cat-meow-14536.mp3";
 import list from "../components/Characters/CharactersList";
 import CheckCharacter from "../components/Game/CheckCharacter";
 import "../components/Characters/Game.scss";
@@ -66,11 +68,10 @@ function Game({ setWins, wins, registeredPseudo }) {
     if (tries > 0) {
       return tries;
     }
-    if (isAvatar) {
-      return "c'était moins une!";
-    }
-    return "C'est perdu. Dommage!";
+    return 0;
   };
+
+  const [play] = useSound(mp3File);
 
   return (
     <div className="GamePage">
@@ -111,10 +112,12 @@ function Game({ setWins, wins, registeredPseudo }) {
           </figcaption>
         </figure>
         <p>
-          essai restant:
+          Essais restants: <br />
           {conditionnalydisplayAnswer()}
         </p>
-        <p>critères restant: {critCounter}</p>
+        <p>
+          Critères restants: <br /> {critCounter}
+        </p>
         <CheckCharacter
           src={char && char.src}
           id={char && char.id}
@@ -127,7 +130,9 @@ function Game({ setWins, wins, registeredPseudo }) {
           <div>
             {isAvatar ? <p>Bravo</p> : <p>Dommage</p>}
             <button id="replay" type="button" onClick={launchNewGame}>
-              Rejouer
+              <button type="submit" onClick={play}>
+                Rejouer
+              </button>
             </button>
           </div>
         )}

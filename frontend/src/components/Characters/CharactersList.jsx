@@ -200,7 +200,7 @@ const list = [
   {
     id: 34,
     src: "https://robohash.org/511.png?set=set4&size=90x90",
-    criteria: ["orange", "accesssories", "spots"],
+    criteria: ["orange", "headAccesssories", "spots"],
     active: true,
   },
   {
@@ -230,7 +230,7 @@ const list = [
   {
     id: 39,
     src: "https://robohash.org/536.png?set=set4&size=90x90",
-    criteria: ["white", "no spots", "headAccessories"],
+    criteria: ["white", "spots", "headAccessories"],
     active: true,
   },
   {

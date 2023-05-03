@@ -13,7 +13,7 @@
   position: relative;
   padding: 0 20px;
   box-sizing: border-box;
-  .logo-img{
+  .logo-img {
     width: 8rem;
   }
   .navbarPseudo {
@@ -44,8 +44,7 @@
           box-shadow: 0px 4px 0px 0px $gradient-color;
         }
         &:focus,
-        &:active,
-        {
+        &:active {
           color: #ba9ae1;
           background: #ffffff;
           border: 1px solid #ba9ae1;
@@ -94,8 +93,8 @@
     right: 0;
     visibility: visible;
   }
-  .navbarItems{
-    .navbarLink{
+  .navbarItems {
+    .navbarLink {
       display: block;
       padding: 1.5rem;
     }

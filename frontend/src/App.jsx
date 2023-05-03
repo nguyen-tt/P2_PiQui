@@ -45,7 +45,11 @@ function App() {
             path="game/:pseudo"
             element={
               <Layout regiteredPseudo={regiteredPseudo} wins={wins}>
-                <Game wins={wins} setWins={setWins} />
+                <Game
+                  regiteredPseudo={regiteredPseudo}
+                  wins={wins}
+                  setWins={setWins}
+                />
               </Layout>
             }
           />

@@ -66,10 +66,7 @@ function Game({ setWins, wins, regiteredPseudo }) {
     if (tries > 0) {
       return tries;
     }
-    if (isAvatar) {
-      return "c'était moins une!";
-    }
-    return "C'est perdu. Dommage!";
+    return 0;
   };
 
   return (
@@ -111,10 +108,12 @@ function Game({ setWins, wins, regiteredPseudo }) {
           </figcaption>
         </figure>
         <p>
-          essai restant:
+          Essais restants: <br />
           {conditionnalydispolayAnswer()}
         </p>
-        <p>critères restant: {critCounter}</p>
+        <p>
+          Critères restants: <br /> {critCounter}
+        </p>
         <CheckCharacter
           src={char && char.src}
           id={char && char.id}

@@ -2,6 +2,8 @@ import { Link, useParams } from "react-router-dom";
 import "./NavBar.scss";
 import { useState } from "react";
 import PropTypes from "prop-types";
+import useSound from "use-sound";
+import mp3File from "@assets/cat-meow-14536.mp3";
 
 function NavBar({ regiteredPseudo, wins }) {
   const [showItems, setShowItems] = useState(false);
@@ -10,7 +12,7 @@ function NavBar({ regiteredPseudo, wins }) {
   function handleShowsItems() {
     setShowItems(!showItems);
   }
-
+  const [play] = useSound(mp3File);
   return (
     <nav className={`navbar ${showItems ? "shownav" : "hidenav"} `}>
       <div className="navbarLogo">
@@ -31,7 +33,7 @@ function NavBar({ regiteredPseudo, wins }) {
                 Jeu
               </Link>
             ) : (
-              <Link to="/game" className="navbarLink">
+              <Link to="/game" className="navbarLink" onClick={play}>
                 Jeu
               </Link>
             )}

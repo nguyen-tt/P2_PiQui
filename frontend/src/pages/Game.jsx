@@ -15,6 +15,7 @@ function Game({ setWins, wins, regiteredPseudo }) {
   const [inGame, setInGame] = useState(list);
   const [tries, setTries] = useState(3);
   const [critCounter, setCritCounter] = useState(5);
+  const [play] = useSound(mp3File);
 
   const disabled = document.querySelectorAll(".disabled");
 
@@ -47,6 +48,7 @@ function Game({ setWins, wins, regiteredPseudo }) {
 
   // fonction bouton replay//
   function launchNewGame() {
+    play();
     setCritCounter(5);
     setTries(3);
     handleRandomCharSelect();
@@ -73,8 +75,6 @@ function Game({ setWins, wins, regiteredPseudo }) {
     }
     return "C'est perdu. Dommage!";
   };
-
-  const [play] = useSound(mp3File);
 
   return (
     <div className="GamePage">
@@ -131,10 +131,8 @@ function Game({ setWins, wins, regiteredPseudo }) {
           <div>
             {isAvatar ? <p>Bravo</p> : <p>Dommage</p>}
             <button id="replay" type="button" onClick={launchNewGame}>
-              <button type="submit" onClick={play}>
                 Rejouer
               </button>
-            </button>
           </div>
         )}
       </div>

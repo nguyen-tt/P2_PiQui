@@ -1,8 +1,9 @@
 import { Link, useParams } from "react-router-dom";
 import "./NavBar.scss";
 import { useState } from "react";
+import PropTypes from "prop-types";
 
-function NavBar() {
+function NavBar({ regiteredPseudo, wins }) {
   const [showItems, setShowItems] = useState(false);
   const { pseudo } = useParams();
 
@@ -18,6 +19,10 @@ function NavBar() {
         </Link>
       </div>
       <div className="navbarPseudo">{pseudo && <p>Chalut {pseudo} !</p>}</div>
+      <div>
+        {regiteredPseudo} <br />
+        Nombre de victoires: {wins}
+      </div>
       <div>
         <ul className="navbarlist">
           <li className="navbarItems">
@@ -79,5 +84,10 @@ function NavBar() {
     </nav>
   );
 }
+
+NavBar.propTypes = {
+  regiteredPseudo: PropTypes.string.isRequired,
+  wins: PropTypes.number.isRequired,
+};
 
 export default NavBar;

@@ -17,6 +17,13 @@
   .logo-img {
     width: 8rem;
   }
+
+  .display-acc-name {
+    color: white;
+    font-family: "Patrick Hand", cursive;
+    font-size: clamp(0.6rem, 1.5vw, 1.25rem);
+  }
+
   .navbarPseudo {
     font-family: "Patrick Hand", cursive;
     color: white;
@@ -90,7 +97,7 @@
   display: none;
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 810px) {
   .navbar .navbarlist {
     flex-direction: column;
     justify-content: center;
@@ -169,7 +176,7 @@
     transform: rotate(-45deg);
   }
 }
-@media screen and (min-width: 780px) {
+@media screen and (min-width: 810px) {
   .navbarItems {
     button {
       font-size: clamp(0.6rem, 1.5vw, 1.25rem);

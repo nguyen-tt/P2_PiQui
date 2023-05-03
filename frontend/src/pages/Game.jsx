@@ -123,11 +123,12 @@ function Game({ setWins, wins, registeredPseudo }) {
           </figcaption>
         </figure>
         <p>
-          Essais restants: <br />
+          {tries <= 1 ? "Essai restant:" : "Essais restants:"} <br />
           {conditionnalydisplayAnswer()}
         </p>
         <p>
-          Critères restants: <br /> {critCounter}
+          {critCounter <= 1 ? "Critère restant:" : "Critères restants:"} <br />{" "}
+          {critCounter}
         </p>
         <CheckCharacter
           src={char && char.src}

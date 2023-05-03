@@ -13,7 +13,7 @@ function shuffle() {
 }
 newList = shuffle();
 
-function Game({ setWins, wins, regiteredPseudo }) {
+function Game({ setWins, wins, registeredPseudo }) {
   const [char, setChar] = useState({});
   const [isAvatar, setIsAvatar] = useState(false);
   const [crit, setCrit] = useState("");
@@ -44,7 +44,7 @@ function Game({ setWins, wins, regiteredPseudo }) {
   useEffect(() => {
     axios.patch(`${import.meta.env.VITE_BACKEND_URL}/win`, {
       wins,
-      regiteredPseudo,
+      registeredPseudo,
     });
   }, [wins]);
 
@@ -151,7 +151,7 @@ function Game({ setWins, wins, regiteredPseudo }) {
 Game.propTypes = {
   wins: PropTypes.number.isRequired,
   setWins: PropTypes.func.isRequired,
-  regiteredPseudo: PropTypes.string.isRequired,
+  registeredPseudo: PropTypes.string.isRequired,
 };
 
 export default Game;

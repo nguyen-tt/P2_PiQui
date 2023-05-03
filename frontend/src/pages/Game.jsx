@@ -30,7 +30,7 @@ function Game({ setWins, wins, registeredPseudo }) {
   // randomly select the mystery character
   const handleRandomCharSelect = () => {
     const choosenId = Math.floor(Math.random() * 32);
-    const choosenOne = newList.find((cat) => cat.id === choosenId);
+    const choosenOne = newList.find((cat) => cat.id === newList[choosenId].id);
     setChar(choosenOne);
     setIsAvatar(false);
   };
@@ -61,8 +61,9 @@ function Game({ setWins, wins, registeredPseudo }) {
     setCritCounter(5);
     setTries(3);
     handleRandomCharSelect();
+    newList = shuffle();
     setInGame(newList);
-    shuffle();
+
     setCrit("");
     for (const i of disabled) {
       i.classList.remove("disabled");

@@ -9,19 +9,18 @@ const rulesPages = [
   },
   {
     message:
-      "Dans PiQui votre objectif est de trouver un personnage mystère choisi au hasard, avant de ne plus avoir le droit de poser des questions !",
+      "Dans PiQui ton objectif est de trouver un chat mystère choisi au hasard, avant de ne plus avoir le droit de poser des questions !",
   },
   {
-    message: `Pour ça, tu vas pouvoir cliquer sur différents critères. Par exemple: "est-ce que le personnage que je dois deviner porte un chapeau ?" Je vais cliquer sur le critère chapeau pour avoir ma réponse
-    !`,
-  },
-  {
-    message:
-      "Une fois ton critère choisi, des personnages vont se griser. Cela t'indique qu'ils ne correspondent pas au personnage que tu dois deviner. L'objectif est d'éliminer le plus de profils avec le moins de coups possibles !",
+    message: `Pour ça, tu vas pouvoir cliquer sur différents critères. Par exemple: "est-ce que le chat que je dois deviner porte un chapeau ?" Je vais cliquer sur le critère chapeau pour avoir ma réponse !`,
   },
   {
     message:
-      "Si ton compteur de questions arrive à zéro, tu peux cliquer sur l'un des personnages pour vérifier si c'est le personnage mystère. Et si tu es sûr(e) de toi, tu n'es même pas obligé(e) d'attendre !",
+      "Une fois ton critère choisi, des chats vont se griser. Cela t'indique qu'ils ne correspondent pas au chat que tu dois deviner. L'objectif est d'éliminer le plus de profils avec le moins de coups possibles !",
+  },
+  {
+    message:
+      "Si ton compteur de questions arrive à zéro, tu peux cliquer sur l'un des chats pour vérifier si c'est le chat mystère. Tu as trois chances ! Et si tu es sûr(e) de toi, tu n'es même pas obligé(e) d'attendre !",
   },
   {
     message: "Prêt(e) à relever le défi ?",

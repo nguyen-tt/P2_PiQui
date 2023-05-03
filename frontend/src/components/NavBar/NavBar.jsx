@@ -27,6 +27,11 @@ function NavBar({ regiteredPseudo, wins }) {
       )}
       <div>
         <ul className="navbarlist">
+          {regiteredPseudo && (
+            <li className="navbarItems">
+              <button type="button">Se déconnecter</button>
+            </li>
+          )}
           <li className="navbarItems">
             {pseudo ? (
               <Link to={`/game/${pseudo}`} className="navbarLink">

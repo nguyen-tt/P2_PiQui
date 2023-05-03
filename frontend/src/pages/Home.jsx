@@ -145,9 +145,14 @@ export default function Home({
 }
 
 Home.propTypes = {
-  pseudoInput: PropTypes.string.isRequired,
-  setPseudoInput: PropTypes.func.isRequired,
+  pseudoInput: PropTypes.string,
+  setPseudoInput: PropTypes.func,
   registeredPseudo: PropTypes.string.isRequired,
   setRegisteredPseudo: PropTypes.func.isRequired,
   setWins: PropTypes.func.isRequired,
+};
+
+Home.defaultProps = {
+  pseudoInput: null,
+  setPseudoInput: null,
 };

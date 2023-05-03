@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import axios from "axios";
 import useSound from "use-sound";
-import mp3File from "@assets/cat-meow-14536.mp3";
+import mp3File from "@assets/cats-meow-81221.mp3";
 import guesscat from "@assets/guesscat.png";
 import list from "../components/Characters/CharactersList";
 import CheckCharacter from "../components/Game/CheckCharacter";
@@ -60,10 +60,9 @@ function Game({ setWins, wins, registeredPseudo }) {
     play();
     setCritCounter(5);
     setTries(3);
-    handleRandomCharSelect();
     newList = shuffle();
+    handleRandomCharSelect();
     setInGame(newList);
-
     setCrit("");
     for (const i of disabled) {
       i.classList.remove("disabled");

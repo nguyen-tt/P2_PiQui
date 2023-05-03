@@ -24,6 +24,7 @@ function App() {
               <Layout regiteredPseudo={regiteredPseudo} wins={wins}>
                 <Home
                   setWins={setWins}
+                  regiteredPseudo={regiteredPseudo}
                   setRegiteredPseudo={setRegiteredPseudo}
                 />
               </Layout>

@@ -19,10 +19,12 @@ function NavBar({ regiteredPseudo, wins }) {
         </Link>
       </div>
       <div className="navbarPseudo">{pseudo && <p>Chalut {pseudo} !</p>}</div>
-      <div>
-        {regiteredPseudo} <br />
-        Nombre de victoires: {wins}
-      </div>
+      {regiteredPseudo && (
+        <div>
+          {regiteredPseudo} <br />
+          Nombre de victoires: {wins}
+        </div>
+      )}
       <div>
         <ul className="navbarlist">
           <li className="navbarItems">

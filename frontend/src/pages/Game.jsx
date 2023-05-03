@@ -33,7 +33,7 @@ function Game({ setWins, wins, regiteredPseudo }) {
   };
 
   useEffect(() => {
-    axios.patch(`${import.meta.env.VITE_BACKEND_URL}/win`, {
+    axios.patch(`${import.meta.env.VITE_BACKEND_URL}/win-counter`, {
       wins,
       regiteredPseudo,
     });

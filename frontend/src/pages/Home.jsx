@@ -60,48 +60,70 @@ export default function Home({
         {!regiteredPseudo && (
           <div className="register-login">
             <div className="register">
-              <h2>Inscription</h2>
-              <label htmlFor="regPseudo">pseudo</label>
-              <input
-                id="regPseudo"
-                type="text"
-                onChange={(e) => {
-                  setUserNameReg(e.target.value);
+              <button
+                type="button"
+                onClick={() => {
+                  document
+                    .querySelector(".register-input")
+                    .classList.toggle("display");
                 }}
-              />
-              <label htmlFor="regPassword">mot de passe</label>
-              <input
-                id="regPassword"
-                type="password"
-                onChange={(e) => {
-                  setPasswordReg(e.target.value);
-                }}
-              />
-              <button onClick={register} type="button">
-                Créer
+              >
+                <h2>Inscription</h2>
               </button>
+              <div className="register-input">
+                <label htmlFor="regPseudo">pseudo</label>
+                <input
+                  id="regPseudo"
+                  type="text"
+                  onChange={(e) => {
+                    setUserNameReg(e.target.value);
+                  }}
+                />
+                <label htmlFor="regPassword">mot de passe</label>
+                <input
+                  id="regPassword"
+                  type="password"
+                  onChange={(e) => {
+                    setPasswordReg(e.target.value);
+                  }}
+                />
+                <button onClick={register} type="button">
+                  Créer
+                </button>
+              </div>
             </div>
             <div className="login">
-              <h2>connexion</h2>
-              <label htmlFor="pseudo">pseudo</label>
-              <input
-                id="pseudo"
-                type="text"
-                onChange={(e) => {
-                  setUserName(e.target.value);
+              <button
+                type="button"
+                onClick={() => {
+                  document
+                    .querySelector(".login-input")
+                    .classList.toggle("display");
                 }}
-              />
-              <label htmlFor="password">mot de passe</label>
-              <input
-                id="password"
-                type="password"
-                onChange={(e) => {
-                  setPassword(e.target.value);
-                }}
-              />
-              <button onClick={login} type="button">
-                Se connecter
+              >
+                <h2>connexion</h2>
               </button>
+              <div className="login-input">
+                <label htmlFor="pseudo">pseudo</label>
+                <input
+                  id="pseudo"
+                  type="text"
+                  onChange={(e) => {
+                    setUserName(e.target.value);
+                  }}
+                />
+                <label htmlFor="password">mot de passe</label>
+                <input
+                  id="password"
+                  type="password"
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                  }}
+                />
+                <button onClick={login} type="button">
+                  Se connecter
+                </button>
+              </div>
               <h3>{loginStatus}</h3>
             </div>
           </div>
@@ -111,9 +133,11 @@ export default function Home({
           lancer une partie !
         </p>
         <p className="rules-link-text">Sinon vous pouvez directement jouer !</p>
-        {!regiteredPseudo && (
-          <Pseudo setPseudoInput={setPseudoInput} pseudoInput={pseudoInput} />
-        )}
+        <Pseudo
+          setPseudoInput={setPseudoInput}
+          pseudoInput={pseudoInput}
+          regiteredPseudo={regiteredPseudo}
+        />
         <UselessFactsApi />
       </div>
     </div>

@@ -50,13 +50,13 @@ router.post("/login", (req, res) => {
           }
         });
       } else {
-        res.send({ message: "pas d'utilisateur a ce nom" });
+        res.send({ message: "pas d'utilisateur à ce nom" });
       }
     })
     .catch(() => res.status(500).send("problème serveur"));
 });
 
-router.patch("/win", (req) => {
+router.patch("/win-counter", (req) => {
   const { wins } = req.body;
   const pseudo = req.body.regiteredPseudo;
 

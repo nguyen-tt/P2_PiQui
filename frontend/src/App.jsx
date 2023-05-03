@@ -11,7 +11,7 @@ import Footer from "@components/Footer/Footer";
 import Layout from "@components/Layout";
 
 function App() {
-  const [regiteredPseudo, setRegiteredPseudo] = useState("");
+  const [registeredPseudo, setRegisteredPseudo] = useState("");
   const [wins, setWins] = useState(0);
 
   return (
@@ -21,10 +21,15 @@ function App() {
           <Route
             path="/"
             element={
-              <Layout regiteredPseudo={regiteredPseudo} wins={wins}>
+              <Layout
+                setRegisteredPseudo={setRegisteredPseudo}
+                registeredPseudo={registeredPseudo}
+                wins={wins}
+              >
                 <Home
                   setWins={setWins}
-                  setRegiteredPseudo={setRegiteredPseudo}
+                  registeredPseudo={registeredPseudo}
+                  setRegisteredPseudo={setRegisteredPseudo}
                 />
               </Layout>
             }
@@ -32,9 +37,13 @@ function App() {
           <Route
             path="game"
             element={
-              <Layout regiteredPseudo={regiteredPseudo} wins={wins}>
+              <Layout
+                setRegisteredPseudo={setRegisteredPseudo}
+                registeredPseudo={registeredPseudo}
+                wins={wins}
+              >
                 <Game
-                  regiteredPseudo={regiteredPseudo}
+                  registeredPseudo={registeredPseudo}
                   wins={wins}
                   setWins={setWins}
                 />
@@ -44,9 +53,13 @@ function App() {
           <Route
             path="game/:pseudo"
             element={
-              <Layout regiteredPseudo={regiteredPseudo} wins={wins}>
+              <Layout
+                setRegisteredPseudo={setRegisteredPseudo}
+                registeredPseudo={registeredPseudo}
+                wins={wins}
+              >
                 <Game
-                  regiteredPseudo={regiteredPseudo}
+                  registeredPseudo={registeredPseudo}
                   wins={wins}
                   setWins={setWins}
                 />
@@ -56,7 +69,11 @@ function App() {
           <Route
             path="rules"
             element={
-              <Layout regiteredPseudo={regiteredPseudo} wins={wins}>
+              <Layout
+                setRegisteredPseudo={setRegisteredPseudo}
+                registeredPseudo={registeredPseudo}
+                wins={wins}
+              >
                 <Rules />
               </Layout>
             }
@@ -64,7 +81,11 @@ function App() {
           <Route
             path="rules/:pseudo"
             element={
-              <Layout regiteredPseudo={regiteredPseudo} wins={wins}>
+              <Layout
+                setRegisteredPseudo={setRegisteredPseudo}
+                registeredPseudo={registeredPseudo}
+                wins={wins}
+              >
                 <Rules />
               </Layout>
             }
@@ -72,7 +93,11 @@ function App() {
           <Route
             path="contact"
             element={
-              <Layout regiteredPseudo={regiteredPseudo} wins={wins}>
+              <Layout
+                setRegisteredPseudo={setRegisteredPseudo}
+                registeredPseudo={registeredPseudo}
+                wins={wins}
+              >
                 <Form />
               </Layout>
             }
@@ -80,7 +105,11 @@ function App() {
           <Route
             path="contact/:pseudo"
             element={
-              <Layout regiteredPseudo={regiteredPseudo} wins={wins}>
+              <Layout
+                setRegisteredPseudo={setRegisteredPseudo}
+                registeredPseudo={registeredPseudo}
+                wins={wins}
+              >
                 <Form />
               </Layout>
             }
@@ -88,7 +117,11 @@ function App() {
           <Route
             path="aboutUs"
             element={
-              <Layout regiteredPseudo={regiteredPseudo} wins={wins}>
+              <Layout
+                setRegisteredPseudo={setRegisteredPseudo}
+                registeredPseudo={registeredPseudo}
+                wins={wins}
+              >
                 <AboutUs />
               </Layout>
             }
@@ -96,7 +129,11 @@ function App() {
           <Route
             path="aboutUs/:pseudo"
             element={
-              <Layout regiteredPseudo={regiteredPseudo} wins={wins}>
+              <Layout
+                setRegisteredPseudo={setRegisteredPseudo}
+                registeredPseudo={registeredPseudo}
+                wins={wins}
+              >
                 <AboutUs />
               </Layout>
             }

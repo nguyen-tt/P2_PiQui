@@ -9,7 +9,8 @@ import axios from "axios";
 export default function Home({
   setPseudoInput,
   pseudoInput,
-  setRegiteredPseudo,
+  registeredPseudo,
+  setRegisteredPseudo,
   setWins,
 }) {
   const [userNameReg, setUserNameReg] = useState("");
@@ -36,7 +37,7 @@ export default function Home({
         if (res.data.message) {
           setLoginStatus(res.data.message);
         } else {
-          setRegiteredPseudo(res.data[0].pseudo);
+          setRegisteredPseudo(res.data[0].pseudo);
           setWins(res.data[0].wins);
         }
       });
@@ -55,59 +56,88 @@ export default function Home({
 
       <div className="container-homePage">
         <h1>Bienvenue sur PiQui !</h1>
+        <p className="rules-link-text">Vous pouvez créer un compte...</p>
+        {!registeredPseudo && (
+          <div className="register-login">
+            <div className="register">
+              <button
+                type="button"
+                onClick={() => {
+                  document
+                    .querySelector(".register-input")
+                    .classList.toggle("display");
+                }}
+              >
+                <h2>Inscription</h2>
+              </button>
+              <div className="register-input">
+                <label htmlFor="regPseudo">pseudo</label>
+                <input
+                  id="regPseudo"
+                  type="text"
+                  onChange={(e) => {
+                    setUserNameReg(e.target.value);
+                  }}
+                />
+                <label htmlFor="regPassword">mot de passe</label>
+                <input
+                  id="regPassword"
+                  type="password"
+                  onChange={(e) => {
+                    setPasswordReg(e.target.value);
+                  }}
+                />
+                <button onClick={register} type="button">
+                  Créer
+                </button>
+              </div>
+            </div>
+            <div className="login">
+              <button
+                type="button"
+                onClick={() => {
+                  document
+                    .querySelector(".login-input")
+                    .classList.toggle("display");
+                }}
+              >
+                <h2>connexion</h2>
+              </button>
+              <div className="login-input">
+                <label htmlFor="pseudo">pseudo</label>
+                <input
+                  id="pseudo"
+                  type="text"
+                  onChange={(e) => {
+                    setUserName(e.target.value);
+                  }}
+                />
+                <label htmlFor="password">mot de passe</label>
+                <input
+                  id="password"
+                  type="password"
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                  }}
+                />
+                <button onClick={login} type="button">
+                  Se connecter
+                </button>
+              </div>
+              <h3>{loginStatus}</h3>
+            </div>
+          </div>
+        )}
         <p className="rules-link-text">
-          Vous pouvez consulter les <Link to="rules">règles du jeu</Link> avant
-          de lancer une partie !
+          ... Ou consulter les <Link to="rules">règles du jeu</Link> avant de
+          lancer une partie !
         </p>
         <p className="rules-link-text">Sinon vous pouvez directement jouer !</p>
-        <div className="register-login">
-          <div className="register">
-            <h2>Inscription</h2>
-            <label htmlFor="regPseudo">pseudo</label>
-            <input
-              id="regPseudo"
-              type="text"
-              onChange={(e) => {
-                setUserNameReg(e.target.value);
-              }}
-            />
-            <label htmlFor="regPassword">mot de passe</label>
-            <input
-              id="regPassword"
-              type="text"
-              onChange={(e) => {
-                setPasswordReg(e.target.value);
-              }}
-            />
-            <button onClick={register} type="button">
-              Créer
-            </button>
-          </div>
-          <div className="login">
-            <h2>connexion</h2>
-            <label htmlFor="pseudo">pseudo</label>
-            <input
-              id="pseudo"
-              type="text"
-              onChange={(e) => {
-                setUserName(e.target.value);
-              }}
-            />
-            <label htmlFor="password">mot de passe</label>
-            <input
-              id="password"
-              type="text"
-              onChange={(e) => {
-                setPassword(e.target.value);
-              }}
-            />
-            <button onClick={login} type="button">
-              Se connecter
-            </button>
-            <h3>{loginStatus}</h3>
-          </div>
-        </div>
-        <Pseudo setPseudoInput={setPseudoInput} pseudoInput={pseudoInput} />
+        <Pseudo
+          setPseudoInput={setPseudoInput}
+          pseudoInput={pseudoInput}
+          registeredPseudo={registeredPseudo}
+        />
         <UselessFactsApi />
       </div>
     </div>
@@ -117,6 +147,7 @@ export default function Home({
 Home.propTypes = {
   pseudoInput: PropTypes.string.isRequired,
   setPseudoInput: PropTypes.func.isRequired,
-  setRegiteredPseudo: PropTypes.func.isRequired,
+  registeredPseudo: PropTypes.string.isRequired,
+  setRegisteredPseudo: PropTypes.func.isRequired,
   setWins: PropTypes.func.isRequired,
 };

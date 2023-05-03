@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
+import axios from "axios";
 import list from "../components/Characters/CharactersList";
 import CheckCharacter from "../components/Game/CheckCharacter";
 import "../components/Characters/Game.scss";
 import CriteriaBtn from "../components/Game/CriteriaBtn";
 
-function Game() {
+function Game({ setWins, wins, regiteredPseudo }) {
   const [char, setChar] = useState({});
   const [isAvatar, setIsAvatar] = useState(false);
   const [crit, setCrit] = useState("");
@@ -21,11 +23,21 @@ function Game() {
     setIsAvatar(false);
   };
 
-  function handleClick(e, item) {
+  const handleClick = (e, item) => {
     setTries((counter) => counter - 1);
     setIsAvatar(item.id === char.id);
-    return !isAvatar && e.currentTarget.classList.add("disabled");
-  }
+    return [
+      !isAvatar && e.currentTarget.classList.add("disabled"),
+      item.id === char.id && setWins((win) => win + 1),
+    ];
+  };
+
+  useEffect(() => {
+    axios.patch(`${import.meta.env.VITE_BACKEND_URL}/win`, {
+      wins,
+      regiteredPseudo,
+    });
+  }, [wins]);
 
   useEffect(() => {
     handleRandomCharSelect();
@@ -123,5 +135,11 @@ function Game() {
     </div>
   );
 }
+
+Game.propTypes = {
+  wins: PropTypes.number.isRequired,
+  setWins: PropTypes.func.isRequired,
+  regiteredPseudo: PropTypes.string.isRequired,
+};
 
 export default Game;

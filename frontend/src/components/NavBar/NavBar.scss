@@ -13,11 +13,8 @@
   position: relative;
   padding: 0 20px;
   box-sizing: border-box;
-
-  h1 {
-    display: flex;
-    justify-content: left;
-    margin-left: 0px;
+  .logo-img {
+    width: 8rem;
   }
   .navbarPseudo {
     font-family: "Patrick Hand", cursive;
@@ -96,9 +93,11 @@
     right: 0;
     visibility: visible;
   }
-  .navbarLink {
-    display: block;
-    padding: 1.5rem;
+  .navbarItems {
+    .navbarLink {
+      display: block;
+      padding: 1.5rem;
+    }
   }
   .navbarBurger {
     display: block;

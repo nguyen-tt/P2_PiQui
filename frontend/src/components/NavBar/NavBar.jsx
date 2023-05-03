@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import "./NavBar.scss";
 import { useState } from "react";
+import logo from "@assets/piqui-logo2.png";
 import PropTypes from "prop-types";
 
 function NavBar({ regiteredPseudo, wins }) {
@@ -15,7 +16,7 @@ function NavBar({ regiteredPseudo, wins }) {
     <nav className={`navbar ${showItems ? "shownav" : "hidenav"} `}>
       <div className="navbarLogo">
         <Link to="/" className="navbarLink">
-          <h1>PiQui</h1>
+          <img src={logo} alt="logo PiQui" className="logo-img" />
         </Link>
       </div>
       <div className="navbarPseudo">{pseudo && <p>Chalut {pseudo} !</p>}</div>

@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import "./NavBar.scss";
+import "./navBar.scss";
 import { useState } from "react";
 import logo from "@assets/piqui-logo2.png";
 import PropTypes from "prop-types";

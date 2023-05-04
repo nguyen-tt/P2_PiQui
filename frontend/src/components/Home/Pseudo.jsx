@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import "@components/Home/pseudo.scss";
 import useSound from "use-sound";
-import mp3File from "@assets/cat-meow-14536.mp3";
+import mp3File from "@assets/cats-meow-111.mp3";
 
 export default function Pseudo({ registeredPseudo }) {
   const [pseudoInput, setPseudoInput] = useState("");
+  const [play] = useSound(mp3File);
 
   const handleSubmit = (e) => {
     e.preventDefault();
   };
-  const [play] = useSound(mp3File);
   return (
     <form onSubmit={handleSubmit} className="form-home">
       {!registeredPseudo && (

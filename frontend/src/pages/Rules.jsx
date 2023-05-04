@@ -1,6 +1,6 @@
 import "../components/rules.scss";
 import useSound from "use-sound";
-import mp3File from "@assets/cat-meow-14536.mp3";
+import mp3File from "@assets/cats-meow-111.mp3";
 import catRules from "@assets/cat_rules.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -31,6 +31,7 @@ const rulesPages = [
 
 export default function Rules() {
   const [textIndex, setTextIndex] = useState(0);
+  const [play] = useSound(mp3File);
 
   const textPrevious = () => {
     setTextIndex(textIndex - 1);
@@ -38,7 +39,6 @@ export default function Rules() {
   const textNext = () => {
     setTextIndex(textIndex + 1);
   };
-  const [play] = useSound(mp3File);
   return (
     <div className="centering">
       <div className="background" />

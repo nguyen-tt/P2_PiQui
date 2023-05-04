@@ -2,19 +2,19 @@ const list = [
   {
     id: 1,
     src: "https://robohash.org/009.png?set=set4&size=90x90",
-    criteria: ["dark yellow", "no spots", "headAccessories", "glasses"],
+    criteria: ["dark yellow", "headAccessories", "glasses"],
     active: true,
   },
   {
     id: 2,
     src: "https://robohash.org/4O3.png?set=set4&size=90x90",
-    criteria: ["white", "no spots", "collar"],
+    criteria: ["white", "collar"],
     active: true,
   },
   {
     id: 3,
     src: "https://robohash.org/300.png?set=set4&size=90x90",
-    criteria: ["dark red", "no spots", "headAccessories"],
+    criteria: ["dark red", "headAccessories"],
     active: true,
   },
   {
@@ -26,13 +26,13 @@ const list = [
   {
     id: 5,
     src: "https://robohash.org/031.png?set=set4&size=90x90",
-    criteria: ["yellow", "no spots", "headAccessories", "glasses"],
+    criteria: ["yellow", "headAccessories", "glasses"],
     active: true,
   },
   {
     id: 6,
     src: "https://robohash.org/301.png?set=set4&size=90x90",
-    criteria: ["orange", "no spots", "glasses", "collar"],
+    criteria: ["orange", "glasses", "collar"],
     active: true,
   },
   {
@@ -98,13 +98,13 @@ const list = [
   {
     id: 17,
     src: "https://robohash.org/387.png?set=set4&size=90x90",
-    criteria: ["yellow", "no spots", "collar", "glasses"],
+    criteria: ["yellow", "collar", "glasses"],
     active: true,
   },
   {
     id: 18,
     src: "https://robohash.org/104.png?set=set4&size=90x90",
-    criteria: ["pink", "no spots", "headAccessories"],
+    criteria: ["pink", "headAccessories"],
     active: true,
   },
   {
@@ -116,7 +116,7 @@ const list = [
   {
     id: 20,
     src: "https://robohash.org/234.png?set=set4&size=90x90",
-    criteria: ["orange", "no spots", "collar"],
+    criteria: ["orange", "collar"],
     active: true,
   },
   {
@@ -128,7 +128,7 @@ const list = [
   {
     id: 22,
     src: "https://robohash.org/138.png?set=set4&size=90x90",
-    criteria: ["white", "no spots", "glasses", "headAccessories"],
+    criteria: ["white", "glasses", "headAccessories"],
     active: true,
   },
   {
@@ -140,7 +140,7 @@ const list = [
   {
     id: 24,
     src: "https://robohash.org/008.png?set=set4&size=90x90",
-    criteria: ["dark yellow", "no spots", "collar"],
+    criteria: ["dark yellow", "collar"],
     active: true,
   },
   {
@@ -158,19 +158,19 @@ const list = [
   {
     id: 27,
     src: "https://robohash.org/030.png?set=set4&size=90x90",
-    criteria: ["dark red", "no spots", "glasses"],
+    criteria: ["dark red", "glasses"],
     active: true,
   },
   {
     id: 28,
     src: "https://robohash.org/106.png?set=set4&size=90x90",
-    criteria: ["pink", "no spots", "collar"],
+    criteria: ["pink", "collar"],
     active: true,
   },
   {
     id: 29,
     src: "https://robohash.org/123.png?set=set4&size=90x90",
-    criteria: ["dark yellow", "no spots", "headAccessories"],
+    criteria: ["dark yellow", "headAccessories"],
     active: true,
   },
   {
@@ -188,7 +188,7 @@ const list = [
   {
     id: 32,
     src: "https://robohash.org/689.png?set=set4&size=90x90",
-    criteria: ["yellow", "no spots", "headAccessories"],
+    criteria: ["yellow", "headAccessories"],
     active: true,
   },
   {
@@ -200,7 +200,7 @@ const list = [
   {
     id: 34,
     src: "https://robohash.org/511.png?set=set4&size=90x90",
-    criteria: ["orange", "headAccesssories", "spots"],
+    criteria: ["orange", "headAccessories", "spots"],
     active: true,
   },
   {
@@ -254,7 +254,7 @@ const list = [
   {
     id: 43,
     src: "https://robohash.org/550.png?set=set4&size=90x90",
-    criteria: ["orange", "headAccessories", "no spots"],
+    criteria: ["orange", "headAccessories"],
     active: true,
   },
   {
@@ -266,7 +266,7 @@ const list = [
   {
     id: 45,
     src: "https://robohash.org/548.png?set=set4&size=90x90",
-    criteria: ["dark red", "no spots", "collar"],
+    criteria: ["dark red", "collar"],
     active: true,
   },
   {
@@ -278,13 +278,13 @@ const list = [
   {
     id: 47,
     src: "https://robohash.org/571.png?set=set4&size=90x90",
-    criteria: ["dark red", "headAccessories", "no spots"],
+    criteria: ["dark red", "headAccessories"],
     active: true,
   },
   {
     id: 48,
     src: "https://robohash.org/575.png?set=set4&size=90x90",
-    criteria: ["white", "headAccessories", "no spots"],
+    criteria: ["white", "headAccessories"],
     active: true,
   },
   {
@@ -302,7 +302,7 @@ const list = [
   {
     id: 51,
     src: "https://robohash.org/599.png?set=set4&size=90x90",
-    criteria: ["dark red", "glasses", "no spots", "collar"],
+    criteria: ["dark red", "glasses", "collar"],
     active: true,
   },
   {
@@ -320,19 +320,19 @@ const list = [
   {
     id: 54,
     src: "https://robohash.org/626.png?set=set4&size=90x90",
-    criteria: ["white", "no spots", "headAccessories"],
+    criteria: ["white", "headAccessories"],
     active: true,
   },
   {
     id: 55,
     src: "https://robohash.org/695.png?set=set4&size=90x90",
-    criteria: ["pink", "no spots", "collar"],
+    criteria: ["pink", "collar"],
     active: true,
   },
   {
     id: 56,
     src: "https://robohash.org/728.png?set=set4&size=90x90",
-    criteria: ["dark yellow", "glasses", "no spots", "headAccessories"],
+    criteria: ["dark yellow", "glasses", "headAccessories"],
     active: true,
   },
   {
@@ -356,7 +356,7 @@ const list = [
   {
     id: 60,
     src: "https://robohash.org/739.png?set=set4&size=90x90",
-    criteria: ["dark red", "no spots", "glasses", "headAccessories"],
+    criteria: ["dark red", "glasses", "headAccessories"],
     active: true,
   },
   {
@@ -380,13 +380,13 @@ const list = [
   {
     id: 64,
     src: "https://robohash.org/829.png?set=set4&size=90x90",
-    criteria: ["yellow", "no spots"],
+    criteria: ["yellow"],
     active: true,
   },
   {
     id: 65,
     src: "https://robohash.org/873.png?set=set4&size=90x90",
-    criteria: ["yellow", "no spots", "collar"],
+    criteria: ["yellow", "collar"],
     active: true,
   },
   {

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import PropTypes from "prop-types";
-import "../components/home.scss";
+import "../components/Home/home.scss";
 import UselessFactsApi from "@components/Home/UselessFactsApi";
 import Pseudo from "@components/Home/Pseudo";
 import axios from "axios";

@@ -10,10 +10,8 @@ function NavBar({ setRegisteredPseudo, registeredPseudo, wins }) {
   const [showItems, setShowItems] = useState(false);
   const { pseudo } = useParams();
   const [play] = useSound(mp3File);
+  const handleShowsItems = () => setShowItems(!showItems);
 
-  function handleShowsItems() {
-    setShowItems(!showItems);
-  }
   return (
     <nav className={`navbar ${showItems ? "shownav" : "hidenav"} `}>
       <div className="navbarLogo">
@@ -43,7 +41,14 @@ function NavBar({ setRegisteredPseudo, registeredPseudo, wins }) {
                 Jeu
               </Link>
             ) : (
-              <Link to="/game" className="navbarLink" onClick={play}>
+              <Link
+                to="/game"
+                className="navbarLink"
+                onClick={() => {
+                  play();
+                  handleShowsItems();
+                }}
+              >
                 Jeu
               </Link>
             )}
@@ -55,7 +60,11 @@ function NavBar({ setRegisteredPseudo, registeredPseudo, wins }) {
                 Règles
               </Link>
             ) : (
-              <Link to="/rules" className="navbarLink">
+              <Link
+                to="/rules"
+                className="navbarLink"
+                onClick={handleShowsItems}
+              >
                 Règles
               </Link>
             )}
@@ -67,7 +76,11 @@ function NavBar({ setRegisteredPseudo, registeredPseudo, wins }) {
                 Contact
               </Link>
             ) : (
-              <Link to="/contact" className="navbarLink">
+              <Link
+                to="/contact"
+                className="navbarLink"
+                onClick={handleShowsItems}
+              >
                 Contact
               </Link>
             )}
@@ -79,7 +92,11 @@ function NavBar({ setRegisteredPseudo, registeredPseudo, wins }) {
                 L'équipe
               </Link>
             ) : (
-              <Link to="/aboutUs" className="navbarLink">
+              <Link
+                to="/aboutUs"
+                className="navbarLink"
+                onClick={handleShowsItems}
+              >
                 L'équipe
               </Link>
             )}

@@ -52,7 +52,15 @@ function Game({ setWins, wins, registeredPseudo }) {
   }, [wins]);
 
   useEffect(() => {
+    newList = shuffle();
+    setInGame(newList);
     handleRandomCharSelect();
+    for (const i of disabled) {
+      i.classList.remove("disabled");
+    }
+    for (const i of newList) {
+      i.active = true;
+    }
   }, []);
 
   // fonction bouton replay//

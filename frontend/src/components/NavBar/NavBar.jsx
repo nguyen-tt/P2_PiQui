@@ -9,11 +9,11 @@ import mp3File from "@assets/cats-meow-111.mp3";
 function NavBar({ setRegisteredPseudo, registeredPseudo, wins }) {
   const [showItems, setShowItems] = useState(false);
   const { pseudo } = useParams();
+  const [play] = useSound(mp3File);
 
   function handleShowsItems() {
     setShowItems(!showItems);
   }
-  const [play] = useSound(mp3File);
   return (
     <nav className={`navbar ${showItems ? "shownav" : "hidenav"} `}>
       <div className="navbarLogo">

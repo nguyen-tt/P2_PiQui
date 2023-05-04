@@ -21,7 +21,7 @@ function Game({ setWins, wins, registeredPseudo }) {
   const [isAvatar, setIsAvatar] = useState(false);
   const [crit, setCrit] = useState("");
   const [tries, setTries] = useState(3);
-  const [critCounter, setCritCounter] = useState(5);
+  const [critCounter, setCritCounter] = useState(4);
   const [inGame, setInGame] = useState(newList);
   const [play] = useSound(mp3File);
 
@@ -58,7 +58,7 @@ function Game({ setWins, wins, registeredPseudo }) {
   // fonction bouton replay//
   function launchNewGame() {
     play();
-    setCritCounter(5);
+    setCritCounter(4);
     setTries(3);
     newList = shuffle();
     handleRandomCharSelect();

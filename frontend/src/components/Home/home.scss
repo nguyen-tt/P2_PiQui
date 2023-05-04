@@ -1,9 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
-
-@font-face {
-  font-family: "Rocher";
-  src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
-}
+@import "../style";
 
 .centering-home {
   display: flex;
@@ -23,20 +18,20 @@
   flex-direction: column;
 
   h1 {
-    font-family: "Rocher";
+    font-family: $title-font;
     font-size: 4rem;
     margin-bottom: 2rem;
   }
 
   .rules-link-text {
     font-size: 1.6rem;
-    font-family: "Patrick Hand", cursive;
+    font-family: $primary-font;
     font-style: italic;
   }
 
   #facts {
     font-size: 1.3rem;
-    font-family: "Patrick Hand", cursive;
+    font-family: $primary-font;
     margin-bottom: 3rem;
   }
 
@@ -54,7 +49,7 @@
       color: white;
       text-decoration: none;
       width: 100%;
-      background-color: #ba9ae1;
+      background-color: $main-color;
       border: 1px solid #fff;
       border-radius: 20px;
       transition: transform 400ms;
@@ -80,7 +75,7 @@
       display: flex;
       flex-direction: column;
       margin: 4px;
-      font-family: "Patrick Hand", cursive;
+      font-family: $primary-font;
       font-size: 1.2rem;
       transition: ease 1s;
 
@@ -98,7 +93,7 @@
       font-size: 1.2rem;
       color: white;
       text-decoration: none;
-      background-color: #ba9ae1;
+      background-color: $main-color;
       border: 1px solid #fff;
       border-radius: 20px;
       margin: 5px auto;
@@ -130,7 +125,7 @@
 }
 
 .page-bg {
-  background: #111 url("@assets/bghome.png") no-repeat top center;
+  background: url("@assets/bghome.png") no-repeat top center;
   background-size: cover;
   z-index: -1;
 }

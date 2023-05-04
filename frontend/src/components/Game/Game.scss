@@ -24,7 +24,7 @@
       background-color: white;
 
       .disabled {
-        background-color: #d5e9b7;
+        background-color: $secondary-color;
         filter: grayscale(0);
         transform: rotateX(180deg);
         img {

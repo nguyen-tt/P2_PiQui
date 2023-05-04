@@ -6,7 +6,7 @@ import mp3File from "@assets/cats-meow-81221.mp3";
 import guesscat from "@assets/guesscat.png";
 import list from "../components/Characters/CharactersList";
 import CheckCharacter from "../components/Game/CheckCharacter";
-import "../components/Characters/Game.scss";
+import "../components/Game/game.scss";
 import CriteriaBtn from "../components/Game/CriteriaBtn";
 
 let newList = [];

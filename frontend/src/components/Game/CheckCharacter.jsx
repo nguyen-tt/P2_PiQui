@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import "./CheckCharacters.scss";
+import "./checkCharacters.scss";
 import { useEffect } from "react";
 // import list from "@components/Characters/CharactersList";
 

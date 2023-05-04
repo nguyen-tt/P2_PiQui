@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import "./checkCharacters.scss";
 import { useEffect } from "react";
-// import list from "@components/Characters/CharactersList";
 
 function CheckCharacter({ criteria, crit, inGame, setInGame, list }) {
   // props: criteria is array criteria of mistery cat

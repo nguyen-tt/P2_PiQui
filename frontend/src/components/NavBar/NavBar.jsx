@@ -4,7 +4,7 @@ import { useState } from "react";
 import logo from "@assets/piqui-logo2.png";
 import PropTypes from "prop-types";
 import useSound from "use-sound";
-import mp3File from "@assets/cat-meow-14536.mp3";
+import mp3File from "@assets/cats-meow-111.mp3";
 
 function NavBar({ setRegisteredPseudo, registeredPseudo, wins }) {
   const [showItems, setShowItems] = useState(false);

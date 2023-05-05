@@ -58,7 +58,7 @@ router.post("/login", (req, res) => {
 
 router.patch("/win-counter", (req) => {
   const { wins } = req.body;
-  const pseudo = req.body.regiteredPseudo;
+  const pseudo = req.body.registeredPseudo;
 
   connection.query("UPDATE users SET wins = ? WHERE pseudo = ?", [
     wins,

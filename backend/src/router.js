@@ -60,10 +60,9 @@ router.patch("/win-counter", (req) => {
   const { wins } = req.body;
   const pseudo = req.body.registeredPseudo;
 
-  connection.query("UPDATE users SET wins = ? WHERE pseudo = ?", [
-    wins,
-    pseudo,
-  ]);
+  connection
+    .query("UPDATE users SET wins = ? WHERE pseudo = ?", [wins, pseudo])
+    .catch((err) => console.error(err));
 });
 
 module.exports = router;

@@ -45,10 +45,12 @@ function Game({ setWins, wins, registeredPseudo }) {
   };
 
   useEffect(() => {
-    axios.patch(`${import.meta.env.VITE_BACKEND_URL}/win-counter`, {
-      wins,
-      registeredPseudo,
-    });
+    axios
+      .patch(`${import.meta.env.VITE_BACKEND_URL}/win-counter`, {
+        wins,
+        registeredPseudo,
+      })
+      .catch((err) => console.error(err));
   }, [wins]);
 
   useEffect(() => {

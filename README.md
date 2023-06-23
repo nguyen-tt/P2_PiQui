@@ -1,7 +1,7 @@
-## Concept
+### PiQui - My second project at the Wild Code School (HTML, CSS, React.js, Node.js, Express) in collaboration with @nefzina, @ChaCharrier, @Alaaric, @RudyR1
 
-This template is meant to serve as a foundation for every P2/P3 following the React-Express-MySQL stack, as learned in Wild Code School.
-It's pre-configured with a set of tools which'll help students produce industry-quality and easier-to-maintain code, while staying as simple as possible to use.
+# Link : https://jsxperts.remote-fr-2.wilders.dev/
+
 
 ## Setup & Use
 

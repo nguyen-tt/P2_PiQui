@@ -1,6 +1,6 @@
-### PiQui - My second project at the Wild Code School (HTML, CSS, React.js, Node.js, Express) in collaboration with @nefzina, @ChaCharrier, @Alaaric, @RudyR1
+## PiQui - My second project at the Wild Code School (HTML, CSS, React.js, Node.js, Express) in collaboration with @nefzina, @ChaCharrier, @Alaaric, @RudyR1
 
-# Link : https://jsxperts.remote-fr-2.wilders.dev/
+### Link : https://jsxperts.remote-fr-2.wilders.dev/
 
 
 ## Setup & Use
